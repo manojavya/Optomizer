@@ -61,6 +61,9 @@ We have added support for Windows OS from v2.0.0 onwards, and now we have all OS
  Linux,
  Mac OS,
  Windows.
+ **All version below v2.0.0 only support linux.**
+ ***Avoid using older versions we reccomend switching to v3.2.0 a more stable and reliable release for users.***
+ v3.2.0 Introduces modern flatlaf-macos-dark UI for a better user experience, this version features gui password prompts over the old terminal `sudo` method for more stability and security.
 
 # Notice
  *The App cannot be updated regularly or weekly due to **SCHOOL!** Thank You for cooprating*
