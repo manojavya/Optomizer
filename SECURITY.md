@@ -12,4 +12,4 @@ v3.1.0 and above supports pull requests as of 6th April 2026. All other pull req
 
 ## Reporting a Vulnerability
 
-Fell free to report vulnerabilities 🙂.
+Feel free to report vulnerabilities 🙂.
