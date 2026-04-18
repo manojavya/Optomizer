@@ -13,7 +13,7 @@ This app requires no form payment at all! This is a free open source project.
               /:-:++oooo+:                  Recommended For Arch Linux
              /++++/+++++++:                 Arch Linux©          
             /++++++++++++++:                NOT ASSOCIATED WITH ARCH LINUX, ONLY FAN MADE! 
-           /+++ooooooooooooo/               Developed by Manojavya! (Known as AlphaWolf6940 on Github).
+           /+++ooooooooooooo/               Developed by Manojavya!.
            /+++ooooooooooooo/           
          ./ooosssso++osssssso+          
         .oossssso-   /osssssso+    
@@ -29,7 +29,7 @@ Then run <pre> ```java -jar filename ``` </pre> (write the download name in plac
 The "Optomizer.jar" will be located in the release section or you may fork this repository and get the jar file, most of the jar files are in `src/bin-dd-mm-yy/` or in `src/`.
 
 # Java
-This app requires Java 24 or above to be installed*. Sorry about the Java version, but it was necessary to implement more features.
+This app requires Java 25 or above to be installed*. Sorry about the Java version, but it was necessary to implement more features.
 V1.0.0 and V2.0.0beta use Java 24 (Class version is 68).
 
 # Why to not use `sudo`?
@@ -37,7 +37,7 @@ This application uses flatlaf UI form v3.20 onwards, any java Swing UI will brea
 
 # How to Use?
 After running `java -jar Optomizer.jar`, the app will launch, and then there will be a text field where you can enter the PID of the app you want to set. Entering the wrong PID could lead to negative performance.
-If you do not know the PID of your app, then you can go to the System Monitor and check the app PID there, also from v3.0.0 onwards we have a list which has all pids.
+If you do not know the PID of your app, then you can go to the System Monitor and check the app PID there, also from v3.0.0 onwards Optomizer has a dropdown box from where you can choose any of the task you wish to choose out of all the tasks, but beware of multi threaded tasks you must choose the correct thread to have a noticable performance boost.
 
 # It should look something like this* (V3.2.0):
 
