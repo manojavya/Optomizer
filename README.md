@@ -50,7 +50,7 @@ v2.0.0 onwards uses Java 25.
 
 # Developers:
 Developed by a 13-year-old btw. I use Arch btw. Pls ignore spelling mistakes, + I spelt Optomizer wrong on purpose.
-Developed by: AlphaWolf6940 & JoeDuck2020. 
+Developed by: Manojavya (old user name was AlphaWolf6940) & JoeDuck2020. 
 
 # Contact
 We have a small Discord server, you may join by clicking the link:
