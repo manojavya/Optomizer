@@ -45,21 +45,22 @@ If you do not know the PID of your app, then you can go to the System Monitor an
 
 <img width="1920" height="1077" alt="image" src="https://github.com/user-attachments/assets/55f5083d-4cae-4eeb-9e63-c78b411fd0c3" />
 
-# Java Versions:
+# Java Versions
 v1.0.0 and v2.0.0beta, use Java 24.
 v2.0.0 onwards uses Java 25. If you are running v3.3.0 use Java 21 as it is more stable and compatible.
 **Please confirm that you are using the correct java version or else the app might not launch and may cause class errors.**
 
-# Developers:
+# Developers
 Developed by a 13-year-old btw. I use Arch btw. Pls ignore spelling mistakes, + I spelt Optomizer wrong on purpose.
-Developed by: Manojavya (old user name was AlphaWolf6940 also known as Arch_Wizard on the Arch User Repository) & JoeDuck2020. 
+Developed by: Manojavya (old user name was AlphaWolf6940 also known as Arch_Wizard on the Arch User Repository) & JoeDuck2020.  
+JoeDuck2020 only gave the Idea of this project they have no role in the maintainance of this project or creation of this project, this project is created and maintained by Manojavya P.M.
 
 # Contact
 We have a small Discord server, you may join by clicking the link:
 ## Contact us at Discord: https://discord.gg/3HKF29KuMX
 This is the link to our Discord server https://discord.gg/3HKF29KuMX
 
-# Stable Releases:
+# Stable Releases
 So far the most stable Optomizer release is the Optomizer v3.3.0 as it is much more advanced and also uses the LTS Java 21!
 
 # Compatibility
