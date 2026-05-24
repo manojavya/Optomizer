@@ -47,7 +47,7 @@ If you do not know the PID of your app, then you can go to the System Monitor an
 
 # Java Versions:
 v1.0.0 and v2.0.0beta, use Java 24.
-v2.0.0 onwards uses Java 25.
+v2.0.0 onwards uses Java 25. If you are running v3.3.0 use Java 21 as it is more stable and compatible.
 **Please confirm that you are using the correct java version or else the app might not launch and may cause class errors.**
 
 # Developers:
