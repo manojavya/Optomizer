@@ -57,6 +57,7 @@ Developed by: Manojavya (old user name was AlphaWolf6940 also known as Arch_Wiza
 # Contact
 We have a small Discord server, you may join by clicking the link:
 ## Contact us at Discord: https://discord.gg/3HKF29KuMX
+This is the link to our Discord server https://discord.gg/3HKF29KuMX
 
 # Stable Releases:
 So far the most stable Optomizer release is the Optomizer v3.3.0 as it is much more advanced and also uses the LTS Java 21!
