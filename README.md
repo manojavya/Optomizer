@@ -1,3 +1,4 @@
+Author: Manojavya P.M Github: @manojavya
 # Optomizer
 An app made for Linux systems to optimise your PC. Made in Java. Also runs on Mac OS and Windows.
 This app requires no form payment at all! This is a free open source project.
@@ -31,6 +32,7 @@ The "Optomizer.jar" will be located in the release section or you may fork this 
 # Java
 This app requires Java 25 or above to be installed*. Sorry about the Java version, but it was necessary to implement more features.
 V1.0.0 and V2.0.0beta use Java 24 (Class version is 68).
+## v3.3.0 Requires Java 21!!
 
 # Why to not use `sudo`?
 This application uses flatlaf UI form v3.20 onwards, any java Swing UI will break if `sudo` is used instead of that we use GUI popups like `pkexec` and `oascript`.
@@ -56,10 +58,13 @@ Developed by: Manojavya (old user name was AlphaWolf6940) & JoeDuck2020.
 We have a small Discord server, you may join by clicking the link:
 ## Contact us at Discord: https://discord.gg/3HKF29KuMX
 
+# Stable Releases:
+So far the most stable Optomizer release is the Optomizer v3.3.0 as it is much more advanced and also uses the LTS Java 21!
+
 # Compatibility
 We have added support for Windows OS from v2.0.0 onwards, and now we have all OS's in support. Linux, Mac OS, Windows.
 **All versions below v2.0.0 only support linux.**
-**Avoid using older versions we reccomend switching to v3.2.0 a more stable and reliable release for users.***
+**Avoid using older versions we reccomend switching to v3.3.0 a more stable and reliable release for users.***
 v3.2.0 Introduces modern flatlaf-macos-dark UI for a better user experience, this version features gui password prompts over the old terminal `sudo` method for more stability and security.
 
 # Notice
