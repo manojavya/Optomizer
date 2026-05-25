@@ -41,9 +41,10 @@ This application uses flatlaf UI form v3.20 onwards, any java Swing UI will brea
 After running `java -jar Optomizer.jar`, the app will launch, and then there will be a text field where you can enter the PID of the app you want to set. Entering the wrong PID could lead to negative performance.
 If you do not know the PID of your app, then you can go to the System Monitor and check the app PID there, also from v3.0.0 onwards Optomizer has a dropdown box from where you can choose any of the task you wish to choose out of all the tasks, but beware of multi threaded tasks you must choose the correct thread to have a noticable performance boost.
 
-# It should look something like this* (V3.2.0):
+# It should look something like this* (V3.3.0):
 
-<img width="1920" height="1077" alt="image" src="https://github.com/user-attachments/assets/55f5083d-4cae-4eeb-9e63-c78b411fd0c3" />
+<img width="803" height="177" alt="Screenshot_20260525_212420" src="https://github.com/user-attachments/assets/711a3ce1-719b-4c95-b1e0-10d7548fe1f8" />
+
 
 # Java Versions
 v1.0.0 and v2.0.0beta, use Java 24.
