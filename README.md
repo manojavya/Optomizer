@@ -48,7 +48,9 @@ If you do not know the PID of your app, then you can go to the System Monitor an
 
 # Java Versions
 v1.0.0 and v2.0.0beta, use Java 24.
-v2.0.0 onwards uses Java 25. If you are running v3.3.0 use Java 21 as it is more stable and compatible.
+v2.0.0 onwards uses Java 25.
+v3.3.0 uses Java 21.
+Java 21 is a more stable release of Java it is also a LTS release which is why v3.3.0 has migrated to Java 21.
 **Please confirm that you are using the correct java version or else the app might not launch and may cause class errors.**
 
 # Developers
@@ -63,6 +65,9 @@ This is the link to our Discord server https://discord.gg/3HKF29KuMX
 
 # Stable Releases
 So far the most stable Optomizer release is the Optomizer v3.3.0 as it is much more advanced and also uses the LTS Java 21!
+
+# Auto refreshing
+As of v3.3.0 so far no version has auto refresh so the user will have to relaunch the application to see the app that they launched after launching optomizer. I regret the inconvinience caused, I plan on making a refresh button or at least a autorefesh script for the future release.
 
 # Compatibility
 We have added support for Windows OS from v2.0.0 onwards, and now we have all OS's in support. Linux, Mac OS, Windows.
