@@ -1,4 +1,6 @@
-Author: Manojavya P.M Github: @manojavya
+Author: Manojavya P.M 
+
+Github: @manojavya
 # Optomizer
 An app made for Linux systems to optimise your PC. Made in Java. Also runs on Mac OS and Windows.
 
