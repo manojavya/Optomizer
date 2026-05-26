@@ -1,6 +1,7 @@
 Author: Manojavya P.M Github: @manojavya
 # Optomizer
 An app made for Linux systems to optimise your PC. Made in Java. Also runs on Mac OS and Windows.
+
 This app requires no form payment at all! This is a free open source project.
 
 *ASCII Logo was taken from `neofetch`!*
@@ -48,14 +49,20 @@ If you do not know the PID of your app, then you can go to the System Monitor an
 
 # Java Versions
 v1.0.0 and v2.0.0beta, use Java 24.
+
 v2.0.0 - v3.2.0 use Java 25.
+
 v3.3.0 uses Java 21.
+
 Java 21 is a more stable release of Java it is also a LTS release which is why v3.3.0 has migrated to Java 21.
+
 **Please confirm that you are using the correct java version or else the app might not launch and may cause class errors.**
 
 # Developers
 Developed by a 13-year-old btw. I use Arch btw. Pls ignore spelling mistakes, + I spelt Optomizer wrong on purpose.
-Developed by: Manojavya (old user name was AlphaWolf6940 also known as Arch_Wizard on the Arch User Repository) & JoeDuck2020.  
+
+Developed by: Manojavya (old user name was AlphaWolf6940 also known as Arch_Wizard on the Arch User Repository) & JoeDuck2020. 
+
 JoeDuck2020 only gave the Idea of this project they have no role in the maintainance of this project or creation of this project, this project is created and maintained by Manojavya P.M.
 
 # Contact
@@ -71,6 +78,7 @@ As of v3.3.0 so far no version has auto refresh so the user will have to relaunc
 
 # Compatibility
 We have added support for Windows OS from v2.0.0 onwards, and now we have all OS's in support. Linux, Mac OS, Windows.
+
 **All versions below v2.0.0 only support linux.**
 **Avoid using older versions we reccomend switching to v3.3.0 a more stable and reliable release for users.***
 v3.2.0 Introduces modern flatlaf-macos-dark UI for a better user experience, this version features gui password prompts over the old terminal `sudo` method for more stability and security.
