@@ -48,7 +48,7 @@ If you do not know the PID of your app, then you can go to the System Monitor an
 
 # Java Versions
 v1.0.0 and v2.0.0beta, use Java 24.
-v2.0.0 onwards uses Java 25.
+v2.0.0 - v3.2.0 use Java 25.
 v3.3.0 uses Java 21.
 Java 21 is a more stable release of Java it is also a LTS release which is why v3.3.0 has migrated to Java 21.
 **Please confirm that you are using the correct java version or else the app might not launch and may cause class errors.**
