@@ -80,7 +80,7 @@ The optomizer app is also in the AUR the link is https://aur.archlinux.org/packa
 
 The AUR is always updated after the Github Repository is updated
 
-If downloading from the AUR you do not need to run `java -jar Optomizervx.x.x.jar` you can simply type `optomizer` in your terminal if the app was successfully installed it will run.
+If downloading from the AUR you do not need to run `java -jar Optomizervx.x.x.jar` you can simply type `optomizer` in your terminal if the app was successfully installed it will run but there is no desktop icon/file for optomizer as of v3.3.0.
 
 # Notice
  *The App cannot be updated regularly or weekly due to **SCHOOL!** Thank You for cooprating*
