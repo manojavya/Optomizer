@@ -31,7 +31,6 @@ Then run <pre> ```java -jar filename ``` </pre> (write the download name in plac
 The "Optomizer.jar" will be located in the release section or you may fork this repository and get the jar file, most of the jar files are in `src/bin-dd-mm-yy/` or in `src/`.
 
 # Java
-This app requires Java 25 or above to be installed*. Sorry about the Java version, but it was necessary to implement more features.
 V1.0.0 and V2.0.0beta use Java 24 (Class version is 68).
 ## v3.3.0 Requires Java 21!!
 
