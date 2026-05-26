@@ -75,6 +75,13 @@ We have added support for Windows OS from v2.0.0 onwards, and now we have all OS
 **Avoid using older versions we reccomend switching to v3.3.0 a more stable and reliable release for users.***
 v3.2.0 Introduces modern flatlaf-macos-dark UI for a better user experience, this version features gui password prompts over the old terminal `sudo` method for more stability and security.
 
+# Arch Linux Specific
+The optomizer app is also in the AUR the link is https://aur.archlinux.org/packages/optomizer
+
+The AUR is always updated after the Github Repository is updated
+
+If downloading from the AUR you do not need to run `java -jar Optomizervx.x.x.jar` you can simply type `optomizer` in your terminal if the app was successfully installed it will run.
+
 # Notice
  *The App cannot be updated regularly or weekly due to **SCHOOL!** Thank You for cooprating*
  ## i use arch btw.
