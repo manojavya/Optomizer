@@ -92,7 +92,8 @@ v3.2.0 Introduces modern flatlaf-macos-dark UI for a better user experience, thi
 This application comes under the GNU GPL 3.0 License 
 
 Optomizer the optimization tool for power users.
-    Copyright (C) 2026  Manojavya P.M
+    
+    **Copyright (C) 2026  Manojavya P.M**
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
