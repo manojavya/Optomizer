@@ -47,9 +47,13 @@ After running `java -jar Optomizer.jar`, the app will launch, and then there wil
 
 If you do not know the name of your app, then you can go to the System Monitor and check the app name there, or if you use a version above v3.0.0 Optomizer has a dropdown box from where you can choose any of the task you wish to choose out of all the tasks.
 
-# It should look something like this* (V3.3.0):
+# It should look something like this* (V3.4.0):
 
-<img width="803" height="177" alt="Screenshot_20260525_212420" src="https://github.com/user-attachments/assets/711a3ce1-719b-4c95-b1e0-10d7548fe1f8" />
+## Dark Mode
+<img width="802" height="165" alt="image" src="https://github.com/user-attachments/assets/b0219e75-1309-4452-be2d-5721d940c152" />
+
+## Light Mode
+<img width="803" height="172" alt="image" src="https://github.com/user-attachments/assets/ac51095e-5592-42ed-91e6-a18f6d222fde" />
 
 
 # Java Versions
@@ -58,6 +62,8 @@ v1.0.0 and v2.0.0beta, use Java 24.
 v2.0.0 upto v3.2.0 use Java 25.
 
 v3.3.0 uses Java 21.
+
+v3.4.0 uses Java 21.
 
 Java 21 is a more stable release of Java it is also a LTS release which is why v3.3.0 has migrated to Java 21.
 
@@ -76,10 +82,10 @@ We have a small Discord server, you may join by clicking the link:
 This is the link to our Discord server https://discord.gg/3HKF29KuMX
 
 # Stable Releases
-So far the most stable Optomizer release is the Optomizer v3.3.0 as it is much more advanced and also uses the LTS Java 21!
+So far the most stable Optomizer release is the Optomizer v3.4.0 as it is much more advanced and also uses the LTS Java 21!
 
-# Auto refreshing
-As of v3.3.0 so far no version has auto refresh so the user will have to relaunch the application to see the app that they launched after launching optomizer. I regret the inconvinience caused, I plan on making a refresh button or at least a autorefesh script for the future release.
+# Refreshing
+v3.4.0 Supports refreshing the process list, there is a dedicated button for refreshing right above the Discord button. 
 
 # Compatibility
 We have added support for Windows OS from v2.0.0 onwards, and now we have all OS's in support. Linux, Mac OS, Windows.
