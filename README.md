@@ -91,8 +91,9 @@ v3.4.0 Supports refreshing the process list, there is a dedicated button for ref
 We have added support for Windows OS from v2.0.0 onwards, and now we have all OS's in support. Linux, Mac OS, Windows.
 
 **All versions below v2.0.0 only support linux.**
-**Avoid using older versions we reccomend switching to v3.3.0 a more stable and reliable release for users.***
+**Avoid using older versions we reccomend switching to v3.4.0 a more stable and reliable release for users.***
 v3.2.0 Introduces modern flatlaf-macos-dark UI for a better user experience, this version features gui password prompts over the old terminal `sudo` method for more stability and security.
+v3.4.0 is a better version of this application as it features a kill process button and also a refresh button while maintaining the flatlaf look and security, this version has introduced Optomizer the light mode, for years Optomizer has been lying in darkness. Now it is waiting for you to download the app and bring it to light!
 
 # License
 This application comes under the GNU GPL 3.0 License 
