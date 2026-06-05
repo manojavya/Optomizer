@@ -19,9 +19,7 @@ Feel free to report vulnerabilities 🙂.
 # Pull Requests life cycle:
 After a new release is releasesd only that release and the previous release will be supported for pull request. Any older versions will be deemed outdated!
 
-# Safty Measures I embedded in the app
+# Safty Protocols I embedded in the app
 Instead of using traditional `sudo` on Linux and MacOS I have put safer GUI alternatives like `pkexec` and `osascript`.
 
-I didnt let Java's ProcessBuilder run the command directly instead I've done `sh -c <code>` for a safer environment and better debugging
-
-In Linux and Windows I have put `cmd.split("");` so that the commands wont jet messed up or joint. 
+I didnt let Java's ProcessBuilder run the command directly instead I've done `sh -c <code>` for a safer environment and better debugging is that in Linux and Windows I have put `cmd.split("");` so that the commands wont get messed up or joint therefore reducing error rates. 
