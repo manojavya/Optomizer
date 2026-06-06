@@ -1,10 +1,14 @@
 Author: Manojavya P.M 
 
-Github: @manojavya
-# Optomizer
-An app made for Linux systems to optimise your PC. Made in Java. Also runs on Mac OS and Windows.
+Github: https://github.com/manojavya
 
-This app requires no form payment at all! This is a free open source project.
+AUR: https://aur.archlinux.org/account/Arch_Wizard
+
+
+# Optomizer
+An app made for Linux systems to optimize your PC. Made in Java. Also runs on Mac OS and Windows from v2.0.0 and above.
+
+This app requires no form payment at all! This is a free open source project, Listed under GNU GPL 3.0 License.
 
 *ASCII Logo was taken from `neofetch`!*
 
@@ -27,11 +31,11 @@ This app requires no form payment at all! This is a free open source project.
  
 
 # How to Run
-Download the "Optomizer.jar".
+Download the `Optomizer.jar` from the releases section.
 
-Open the Terminal and navigate to the download.
+Open the Terminal and navigate to the download folder.
 
-Then run <pre> ```java -jar filename ``` </pre> (write the download name in place of filename)
+Then run <pre> ```java -jar filename ``` </pre> (type the download name in place of filename)
 
 The "Optomizer.jar" will be located in the release section or you may fork this repository and get the jar file, most of the jar files are in `src/bin-dd-mm-yy/` or in `src/`.
 
@@ -49,10 +53,10 @@ If you do not know the name of your app, then you can go to the System Monitor a
 
 # It should look something like this* (V3.4.0):
 
-## Dark Mode
+## Dark Mode looks like this
 <img width="802" height="165" alt="image" src="https://github.com/user-attachments/assets/b0219e75-1309-4452-be2d-5721d940c152" />
 
-## Light Mode
+## Light Mode looks like this
 <img width="803" height="172" alt="image" src="https://github.com/user-attachments/assets/ac51095e-5592-42ed-91e6-a18f6d222fde" />
 
 
@@ -65,12 +69,12 @@ v3.3.0 uses Java 21.
 
 v3.4.0 uses Java 21.
 
-Java 21 is a more stable release of Java it is also a LTS release which is why v3.3.0 has migrated to Java 21.
+Java 21 is a more stable release of Java it is also a LTS release which is why v3.3.0 and v3.4.0 have migrated to Java 21.
 
 **Please confirm that you are using the correct java version or else the app might not launch and may cause class errors.**
 
 # Developers
-Developed by a 13-year-old btw. I use Arch btw. Pls ignore spelling mistakes, + I spelt Optomizer wrong on purpose.
+Developed by a 13-year-old btw. I use Arch btw. Pls ignore spelling mistakes, + I spelt Optomizer wrong on purpose, Optomizer was spelled wrong to be unique, intitially it was just a spelling mistake but then I released how unique this name was so I kept it :) .
 
 Developed by: Manojavya (old user name was AlphaWolf6940 also known as Arch_Wizard on the Arch User Repository) & JoeDuck2020. 
 
@@ -118,9 +122,12 @@ This application comes under the GNU GPL 3.0 License
 # Arch Linux Specific
 The optomizer app is also in the AUR the link is https://aur.archlinux.org/packages/optomizer
 
-The AUR is always updated after the Github Repository is updated
+The AUR is always updated after the Github Repository is updated.
 
-If downloading from the AUR you do not need to run `java -jar Optomizervx.x.x.jar` you can simply type `optomizer` in your terminal if the app was successfully installed it will run but there is no desktop icon/file for optomizer as of v3.3.0.
+If you are downloading from the AUR you do not need to run `java -jar Optomizervx.x.x.jar` you can simply type `optomizer` in your terminal if the app was successfully installed it will run but there is no desktop icon/file for optomizer as of v3.4.0.
+
+This is my profile on the AUR:
+https://aur.archlinux.org/account/Arch_Wizard
 
 # Notice
  *The App cannot be updated regularly or weekly due to **SCHOOL!** Thank You for cooprating*
