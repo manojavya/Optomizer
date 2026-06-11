@@ -6,7 +6,7 @@ AUR: https://aur.archlinux.org/account/Arch_Wizard
 
 
 # Optomizer
-An app made for Linux systems to optimize your PC. Made in Java. Also runs on Mac OS and Windows from v2.0.0 and above.
+An app made for Linux systems to optimize your PC. Made in Java. The app also runs on Mac OS and Windows along with Linux from v2.0.0 and above.
 
 This app requires no form payment at all! This is a free open source project, Listed under GNU GPL 3.0 License.
 
@@ -35,7 +35,7 @@ Download the `Optomizer.jar` from the releases section.
 
 Open the Terminal and navigate to the download folder.
 
-Then run <pre> ```java -jar filename ``` </pre> (type the download name in place of filename)
+Then run <pre> ```java -jar <filename> ``` </pre> (type the download name in place of filename)
 
 The "Optomizer.jar" will be located in the release section or you may fork this repository and get the jar file, most of the jar files are in `src/bin-dd-mm-yy/` or in `src/`.
 
@@ -99,6 +99,9 @@ We have added support for Windows OS from v2.0.0 onwards, and now we have all OS
 v3.2.0 Introduces modern flatlaf-macos-dark UI for a better user experience, this version features gui password prompts over the old terminal `sudo` method for more stability and security.
 v3.4.0 is a better version of this application as it features a kill process button and also a refresh button while maintaining the flatlaf look and security, this version has introduced Optomizer the light mode, for years Optomizer has been lying in darkness. Now it is waiting for you to download the app and bring it to light!
 
+The app uses in build flatlaf 3.7 from v3.2.0 onwards no extra downloads are required!
+versions below v3.2.0 do not support flatlaf and are highly unstable, please use the latest version!
+
 # License
 This application comes under the GNU GPL 3.0 License 
 
@@ -124,7 +127,7 @@ The optomizer app is also in the AUR the link is https://aur.archlinux.org/packa
 
 The AUR is always updated after the Github Repository is updated.
 
-If you are downloading from the AUR you do not need to run `java -jar Optomizervx.x.x.jar` you can simply type `optomizer` in your terminal if the app was successfully installed it will run but there is no desktop icon/file for optomizer as of v3.4.0.
+If you are downloading from the AUR you do not need to run `java -jar Optomizervx.x.x.jar` you can simply type `optomizer` in your terminal, if the app was successfully installed it will run but there is no desktop icon/file for optomizer as of v3.4.0.
 
 This is my profile on the AUR:
 https://aur.archlinux.org/account/Arch_Wizard
