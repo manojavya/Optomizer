@@ -74,9 +74,9 @@ Java 21 is a more stable release of Java it is also a LTS release which is why v
 **Please confirm that you are using the correct java version or else the app might not launch and may cause class errors.**
 
 # Developers
-Developed by a 13-year-old btw. I use Arch btw. Pls ignore spelling mistakes, + I spelt Optomizer wrong on purpose, Optomizer was spelled wrong to be unique, intitially it was just a spelling mistake but then I released how unique this name was so I kept it :) .
+Developed by me btw. I use Arch btw. Pls ignore spelling mistakes, + I spelt Optomizer wrong on purpose, Optomizer was spelled wrong to be unique, intitially it was just a spelling mistake but then I released how unique this name was so I kept it :) .
 
-Developed by: Manojavya (old user name was AlphaWolf6940 also known as Arch_Wizard on the Arch User Repository) & JoeDuck2020. 
+Developed by: Manojavya (old user name was AlphaWolf6940 also known as Arch_Wizard on the Arch User Repository). 
 
 JoeDuck2020 only gave the Idea of this project they have no role in the maintainance of this project or creation of this project, this project is created and maintained by Manojavya P.M.
 
