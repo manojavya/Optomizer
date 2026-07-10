@@ -93,6 +93,7 @@ v3.4.0 Supports refreshing the process list, there is a dedicated button for ref
 
 # Compatibility
 We have added support for Windows OS from v2.0.0 onwards, and now we have all OS's in support. Linux, Mac OS, Windows.
+Windows version is highly unstable as of v3.4.0 will most likely not work, I recommend windows users to wait for a stable release for windows
 
 **All versions below v2.0.0 only support linux.**
 **Avoid using older versions we reccomend switching to v3.4.0 a more stable and reliable release for users.***
