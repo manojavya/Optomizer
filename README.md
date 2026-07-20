@@ -97,8 +97,8 @@ Windows version is highly unstable as of v3.4.0 will most likely not work, I rec
 
 **All versions below v2.0.0 only support linux.**
 **Avoid using older versions we reccomend switching to v3.4.0 a more stable and reliable release for users.***
-v3.2.0 Introduces modern flatlaf-macos-dark UI for a better user experience, this version features gui password prompts over the old terminal `sudo` method for more stability and security.
-v3.4.0 is a better version of this application as it features a kill process button and also a refresh button while maintaining the flatlaf look and security, this version has introduced Optomizer the light mode, for years Optomizer has been lying in darkness. Now it is waiting for you to download the app and bring it to light!
+
+As of v3.4.0 the windows compatibility just exists but is very unstable, buggy and not functional v3.5.0 will fix this issiue.
 
 The app uses in build flatlaf 3.7 from v3.2.0 onwards no extra downloads are required!
 versions below v3.2.0 do not support flatlaf and are highly unstable, please use the latest version!
