@@ -41,7 +41,7 @@ Then run <pre> ```java -jar <filename> ``` </pre> (type the download name in pla
 The "Optomizervx.x.x.jar" will be located in the release section or you may fork this repository and get the jar file, most of the jar files are in `src/bin-dd-mm-yy/` or in `src/`.
 
 # Do not use `sudo`!
-This application uses flatlaf UI form v3.20 onwards, any java Swing UI will break if `sudo` is used instead of that we use GUI popups like `pkexec` and `oascript`.
+This application uses flatlaf UI form v3.2.0 onwards, any java Swing UI will break if `sudo` is used instead of that we use GUI popups like `pkexec` and `oascript`.
 
 # How to Use?
 After running `java -jar Optomizer.jar`, the app will launch, and then there will be a text field where you can enter the name (Please enter the name of the app if you are in v3.3.0 or above as lower version strictly require PID and will break if you give a name) of the app you want to set. Entering the wrong name could lead to negative performance.
