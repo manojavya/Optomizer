@@ -64,14 +64,16 @@ If you do not know the name of your app, then you can go to the System Monitor a
 # Dependencies and versions:
 Depends on: Java
 
-| Version      |      Version |
-| -------------|------------- |
-| v1.0.0       |      Java 24 |
-| v2.0.0beta   |      Java 24 |
-| v2.0.0       |      Java 25 |
-| v3.2.0       |      Java 25 |
-| v3.3.0       |      Java 21 |
-| v3.4.0       |      Java 21 |
+
+| Version      | Required Java Version |
+| :---         | :---                  |
+| **v3.4.0**   | Java 21 or above      |
+| **v3.3.0**   | Java 21 or above      |
+| **v3.2.0**   | Java 25 or above      |
+| **v2.0.0**   | Java 25 or above      |
+| **v2.0.0beta**| Java 24 or above     |
+| **v1.0.0**   | Java 24 or above      |
+
 
 **Please confirm that you are using the correct java version or else the app might not launch and may cause class errors.**
 
