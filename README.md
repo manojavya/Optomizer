@@ -58,7 +58,9 @@ If you do not know the name of your app, then you can go to the System Monitor a
 
 
 # Dependencies and versions:
-**Depends on: Java**
+**Depends on: Java (C) Oracle 2026**  
+Requires Java to function, 100% of this app is made in java altough the commands are not java commands they are run using `process builder` for  advanced connectivity with the terminal.  
+The correct version or above is required for this app to function as failing to comply with them can cause errors.  
 
 | Version      | Required Java Version |
 | :---         | :---                  |
@@ -69,12 +71,10 @@ If you do not know the name of your app, then you can go to the System Monitor a
 | **v2.0.0beta**| Java 24 or above     |
 | **v1.0.0**   | Java 24 or above      |
 
-**Please confirm that you are using the correct java version or else the app might not launch and may cause class errors.**
-
 # Developers
 Developed by me btw. I use Arch btw. Pls ignore spelling mistakes, + I spelt Optomizer wrong on purpose, Optomizer was spelled wrong to be unique, intitially it was just a spelling mistake but then I released how unique this name was so I kept it :) .
 
-Developed by: Manojavya (old user name was AlphaWolf6940 also known as Arch_Wizard on the Arch User Repository). 
+Developed by: Manojavya (old user name was AlphaWolf6940 also known as Arch_Wizard on the Arch User Repository and Manu on the Arch Wiki). 
 
 JoeDuck2020 only gave the Idea of this project they have no role in the maintainance of this project or creation of this project, this project is created and maintained by Manojavya P.M.
 
@@ -84,6 +84,7 @@ Contact us at Discord: https://discord.gg/3HKF29KuMX
 
 # Stable Releases
 So far the most stable Optomizer release is the Optomizer v3.4.0 as it is much more advanced and also uses the LTS Java 21!
+v3.5.0 comming soon! features a patch for issue #4 and #5
 
 # Refreshing
 v3.4.0 Supports refreshing the process list, there is a dedicated button for refreshing right above the Discord button. The refresh button does not auto refresh as it consumes resources which is not ideal for an app which is meant to boost performance.
