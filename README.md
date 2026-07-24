@@ -38,13 +38,9 @@ Open the Terminal and navigate to the download folder.
 
 Then run <pre> ```java -jar <filename> ``` </pre> (type the download name in place of filename)
 
-The "Optomizer.jar" will be located in the release section or you may fork this repository and get the jar file, most of the jar files are in `src/bin-dd-mm-yy/` or in `src/`.
+The "Optomizervx.x.x.jar" will be located in the release section or you may fork this repository and get the jar file, most of the jar files are in `src/bin-dd-mm-yy/` or in `src/`.
 
-# Java
-V1.0.0 and V2.0.0beta use Java 24 (Class version is 68).
-## v3.3.0 Requires Java 21!!
-
-# Why to not use `sudo`?
+# Do not use `sudo`!
 This application uses flatlaf UI form v3.20 onwards, any java Swing UI will break if `sudo` is used instead of that we use GUI popups like `pkexec` and `oascript`.
 
 # How to Use?
@@ -62,8 +58,7 @@ If you do not know the name of your app, then you can go to the System Monitor a
 
 
 # Dependencies and versions:
-Depends on: Java
-
+**Depends on: Java**
 
 | Version      | Required Java Version |
 | :---         | :---                  |
@@ -73,7 +68,6 @@ Depends on: Java
 | **v2.0.0**   | Java 25 or above      |
 | **v2.0.0beta**| Java 24 or above     |
 | **v1.0.0**   | Java 24 or above      |
-
 
 **Please confirm that you are using the correct java version or else the app might not launch and may cause class errors.**
 
@@ -85,19 +79,18 @@ Developed by: Manojavya (old user name was AlphaWolf6940 also known as Arch_Wiza
 JoeDuck2020 only gave the Idea of this project they have no role in the maintainance of this project or creation of this project, this project is created and maintained by Manojavya P.M.
 
 # Contact
-We have a small Discord server, you may join by clicking the link:
-## Contact us at Discord: https://discord.gg/3HKF29KuMX
-This is the link to our Discord server https://discord.gg/3HKF29KuMX
+We have a Discord server, you may join by clicking the link:
+Contact us at Discord: https://discord.gg/3HKF29KuMX
 
 # Stable Releases
 So far the most stable Optomizer release is the Optomizer v3.4.0 as it is much more advanced and also uses the LTS Java 21!
 
 # Refreshing
-v3.4.0 Supports refreshing the process list, there is a dedicated button for refreshing right above the Discord button. 
+v3.4.0 Supports refreshing the process list, there is a dedicated button for refreshing right above the Discord button. The refresh button does not auto refresh as it consumes resources which is not ideal for an app which is meant to boost performance.
 
 # Compatibility
 We have added support for Windows OS from v2.0.0 onwards, and now we have all OS's in support. Linux, Mac OS, Windows.
-Windows version is highly unstable as of v3.4.0 will most likely not work, I recommend windows users to wait for a stable release for windows
+Windows users are recommended to use v3.5.0(Not yet released, under development) for stability. 
 
 **All versions below v2.0.0 only support linux.**
 **Avoid using older versions we reccomend switching to v3.4.0 a more stable and reliable release for users.***
@@ -139,5 +132,7 @@ https://aur.archlinux.org/account/Arch_Wizard
 
 # Notice
  *The App cannot be updated regularly or weekly due to **SCHOOL!** Thank You for cooprating*
- ## i use arch btw.
+  i use arch btw.
+  Made in India.
+  Happy to help!
 >**The look might change with time.*
