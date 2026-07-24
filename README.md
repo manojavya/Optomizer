@@ -1,10 +1,10 @@
 Author: Manojavya P.M 
 
-Github: https://github.com/manojavya
+Github: [@manojavya](https://github.com/manojavya)
 
-AUR: https://aur.archlinux.org/account/Arch_Wizard
+AUR: [@Arch_Wizard](https://aur.archlinux.org/account/Arch_Wizard)
 
-Arch_wiki: https://wiki.archlinux.org/title/User:Manu
+Arch_wiki: [@Manu](https://wiki.archlinux.org/title/User:Manu)
 
 # Optomizer
 An app made for Linux systems to optimize your PC. Made in Java. The app also runs on Mac OS and Windows along with Linux from v2.0.0 and above.
@@ -80,7 +80,8 @@ JoeDuck2020 only gave the Idea of this project they have no role in the maintain
 
 # Contact
 We have a Discord server, you may join by clicking the link:
-Contact us at Discord: https://discord.gg/3HKF29KuMX
+Contact us at Discord: [Optomizer Discord](https://discord.gg/3HKF29KuMX)  
+The link is: https://discord.gg/3HKF29KuMX
 
 # Stable Releases
 So far the most stable Optomizer release is the Optomizer v3.4.0 as it is much more advanced and also uses the LTS Java 21!  
@@ -122,14 +123,9 @@ This application comes under the GNU GPL 3.0 License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # Arch Linux Specific
-The optomizer app is also in the AUR the link is https://aur.archlinux.org/packages/optomizer
-
-The AUR is always updated after the Github Repository is updated.
-
-If you are downloading from the AUR you do not need to run `java -jar Optomizervx.x.x.jar` you can simply type `optomizer` in your terminal, if the app was successfully installed it will run but there is no desktop icon/file for optomizer as of v3.4.0.
-
-This is my profile on the AUR:
-https://aur.archlinux.org/account/Arch_Wizard
+The optomizer app is also in the AUR the link is [Optomizer AUR](https://aur.archlinux.org/packages/optomizer) 
+The AUR is always updated after the Github Repository is updated.  
+If you are downloading from the AUR you do not need to run `java -jar Optomizervx.x.x.jar` you can simply type `optomizer` in your terminal, if the app was successfully installed it will run but there is no desktop icon/file for optomizer as of v3.4.0.  
 
 # Notice
  *The App cannot be updated regularly or weekly due to **SCHOOL!** Thank You for cooprating*
