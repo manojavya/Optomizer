@@ -38,7 +38,7 @@ Open the Terminal and navigate to the download folder.
 
 Then run <pre> ```java -jar <filename> ``` </pre> (type the download name in place of filename)
 
-The "Optomizervx.x.x.jar" will be located in the release section or you may fork this repository and get the jar file, most of the jar files are in `src/bin-dd-mm-yy/` or in `src/`.
+The "Optomizer.jar" will be located in the release section or you may fork this repository and get the jar file, most of the jar files are in `src/bin-dd-mm-yy/` or in `src/`.
 
 # Do not use `sudo`!
 This application uses flatlaf UI form v3.2.0 onwards, any java Swing UI will break if `sudo` is used instead of that we use GUI popups like `pkexec` and `oascript`.
@@ -122,7 +122,7 @@ This application comes under the GNU GPL 3.0 License
 # Arch Linux Specific
 The optomizer app is also in the AUR the link is [Optomizer AUR](https://aur.archlinux.org/packages/optomizer) 
 The AUR is always updated after the Github Repository is updated.  
-If you are downloading from the AUR you do not need to run `java -jar Optomizervx.x.x.jar` you can simply type `optomizer` in your terminal, if the app was successfully installed it will run but there is no desktop icon/file for optomizer as of v3.4.0.  
+If you are downloading from the AUR you do not need to run `java -jar Optomizer.jar` you can simply type `optomizer` in your terminal, if the app was successfully installed it will run but there is no desktop icon/file for optomizer as of v3.4.0.  
 
 # Notice
  *The App cannot be updated regularly or weekly due to **SCHOOL!** Thank You for cooprating*
