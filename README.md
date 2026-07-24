@@ -83,8 +83,8 @@ We have a Discord server, you may join by clicking the link:
 Contact us at Discord: https://discord.gg/3HKF29KuMX
 
 # Stable Releases
-So far the most stable Optomizer release is the Optomizer v3.4.0 as it is much more advanced and also uses the LTS Java 21!
-v3.5.0 comming soon! features a patch for issue #4 and #5
+So far the most stable Optomizer release is the Optomizer v3.4.0 as it is much more advanced and also uses the LTS Java 21!  
+v3.5.0 comming soon! features a patch for [Issue #4](https://github.com/manojavya/Optomizer/issues/4) and [Issue #5](https://github.com/manojavya/Optomizer/issues/5)
 
 # Refreshing
 v3.4.0 Supports refreshing the process list, there is a dedicated button for refreshing right above the Discord button. The refresh button does not auto refresh as it consumes resources which is not ideal for an app which is meant to boost performance.
