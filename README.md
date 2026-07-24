@@ -132,7 +132,7 @@ https://aur.archlinux.org/account/Arch_Wizard
 
 # Notice
  *The App cannot be updated regularly or weekly due to **SCHOOL!** Thank You for cooprating*
-  i use arch btw.
-  Made in India.
-  Happy to help!
+  i use arch btw.  
+  Made in India.  
+  Happy to help!  
 >**The look might change with time.*
