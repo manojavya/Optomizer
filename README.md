@@ -85,22 +85,19 @@ The link is: https://discord.gg/3HKF29KuMX
 
 # Stable Releases
 So far the most stable Optomizer release is the Optomizer v3.4.0 as it is much more advanced and also uses the LTS Java 21!  
-v3.5.0 comming soon! features a patch for [Issue #4](https://github.com/manojavya/Optomizer/issues/4) and [Issue #5](https://github.com/manojavya/Optomizer/issues/5)
+v3.5.0 coming soon! features a patch for [Issue #4](https://github.com/manojavya/Optomizer/issues/4) and [Issue #5](https://github.com/manojavya/Optomizer/issues/5)
 
 # Refreshing
 v3.4.0 Supports refreshing the process list, there is a dedicated button for refreshing right above the Discord button. The refresh button does not auto refresh as it consumes resources which is not ideal for an app which is meant to boost performance.
 
 # Compatibility
-We have added support for Windows OS from v2.0.0 onwards, and now we have all OS's in support. Linux, Mac OS, Windows.
+We have added support for Windows OS from v2.0.0 onwards, and now we have all OS's in support. Linux, Mac OS, Windows.  
 Windows users are recommended to use v3.5.0(Not yet released, under development) for stability. 
-
-**All versions below v2.0.0 only support linux.**
-**Avoid using older versions we reccomend switching to v3.4.0 a more stable and reliable release for users.***
-
-As of v3.4.0 the windows compatibility just exists but is very unstable, buggy and not functional v3.5.0 will fix this issiue.
-
-The app uses in build flatlaf 3.7 from v3.2.0 onwards no extra downloads are required!
-versions below v3.2.0 do not support flatlaf and are highly unstable, please use the latest version!
+**All versions below v2.0.0 only support linux.**  
+**Avoid using older versions we reccomend switching to v3.4.0 a more stable and reliable release for users.***  
+As of v3.4.0 the windows compatibility just exists but is very unstable, buggy and not functional v3.5.0 will fix this issue.  
+The app uses in build flatlaf 3.7 from v3.2.0 onwards no extra downloads are required!  
+versions below v3.2.0 do not support flatlaf and are highly unstable, please use the latest version!  
 
 # License
 This application comes under the GNU GPL 3.0 License 
