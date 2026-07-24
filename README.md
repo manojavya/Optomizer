@@ -4,6 +4,7 @@ Github: https://github.com/manojavya
 
 AUR: https://aur.archlinux.org/account/Arch_Wizard
 
+Arch_wiki: https://wiki.archlinux.org/title/User:Manu
 
 # Optomizer
 An app made for Linux systems to optimize your PC. Made in Java. The app also runs on Mac OS and Windows along with Linux from v2.0.0 and above.
@@ -51,25 +52,26 @@ After running `java -jar Optomizer.jar`, the app will launch, and then there wil
 
 If you do not know the name of your app, then you can go to the System Monitor and check the app name there, or if you use a version above v3.0.0 Optomizer has a dropdown box from where you can choose any of the task you wish to choose out of all the tasks.
 
-# It should look something like this* (V3.4.0):
+# Preview* (V3.4.0):
 
-## Dark Mode looks like this
+## Dark Mode
 <img width="802" height="165" alt="image" src="https://github.com/user-attachments/assets/b0219e75-1309-4452-be2d-5721d940c152" />
 
-## Light Mode looks like this
+## Light Mode
 <img width="803" height="172" alt="image" src="https://github.com/user-attachments/assets/ac51095e-5592-42ed-91e6-a18f6d222fde" />
 
 
-# Java Versions
-v1.0.0 and v2.0.0beta, use Java 24.
+# Dependencies and versions:
+Depends on: Java
 
-v2.0.0 upto v3.2.0 use Java 25.
-
-v3.3.0 uses Java 21.
-
-v3.4.0 uses Java 21.
-
-Java 21 is a more stable release of Java it is also a LTS release which is why v3.3.0 and v3.4.0 have migrated to Java 21.
+| Version      |      Version |
+| -------------|------------- |
+| v1.0.0       |      Java 24 |
+| v2.0.0beta   |      Java 24 |
+| v2.0.0       |      Java 25 |
+| v3.2.0       |      Java 25 |
+| v3.3.0       |      Java 21 |
+| v3.4.0       |      Java 21 |
 
 **Please confirm that you are using the correct java version or else the app might not launch and may cause class errors.**
 
