@@ -41,7 +41,8 @@ Then run <pre> ```java -jar <filename> ``` </pre> (type the download name in pla
 The "Optomizer.jar" will be located in the release section or you may fork this repository and get the jar file, most of the jar files are in `src/bin-dd-mm-yy/` or in `src/`.
 
 # Do not use `sudo`!
-This application uses flatlaf UI form v3.2.0 onwards, any java Swing UI will break if `sudo` is used instead of that we use GUI popups like `pkexec` and `oascript`.
+> [!WARNING]
+> This application uses flatlaf UI form v3.2.0 onwards, any java Swing UI will break if `sudo` is used instead of that we use GUI popups like `pkexec` and `oascript`.
 
 # How to Use?
 After running `java -jar Optomizer.jar`, the app will launch, and then there will be a text field where you can enter the name (Please enter the name of the app if you are in v3.3.0 or above as lower version strictly require PID and will break if you give a name) of the app you want to set. Entering the wrong name could lead to negative performance.
@@ -59,8 +60,9 @@ If you do not know the name of your app, then you can go to the System Monitor a
 
 # Dependencies and versions:
 **Depends on: Java (C) Oracle 2026**  
-Requires Java to function, 100% of this app is made in java altough the commands are not java commands they are run using `process builder` for  advanced connectivity with the terminal.  
-The correct version or above is required for this app to function as failing to comply with them can cause errors.  
+> [!CAUTION]
+> Requires Java to function, 100% of this app is made in java altough the commands are not java commands they are run using `process builder` for  advanced connectivity with the terminal.  
+> The correct version or above is required for this app to function as failing to comply with them can cause errors.  
 
 | Version      | Required Java Version |
 | :---         | :---                  |
@@ -95,7 +97,8 @@ We have added support for Windows OS from v2.0.0 onwards, and now we have all OS
 Windows users are recommended to use v3.5.0(Not yet released, under development) for stability. 
 **All versions below v2.0.0 only support linux.**  
 **Avoid using older versions we reccomend switching to v3.4.0 a more stable and reliable release for users.***  
-As of v3.4.0 the windows compatibility just exists but is very unstable, buggy and not functional v3.5.0 will fix this issue.  
+> [!CAUTION]
+> As of v3.4.0 the windows compatibility just exists but is very unstable, buggy and not functional v3.5.0 will fix this issue.  
 The app uses in build flatlaf 3.7 from v3.2.0 onwards no extra downloads are required!  
 versions below v3.2.0 do not support flatlaf and are highly unstable, please use the latest version!  
 
