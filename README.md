@@ -98,9 +98,10 @@ Windows users are recommended to use v3.5.0(Not yet released, under development)
 **All versions below v2.0.0 only support linux.**  
 **Avoid using older versions we reccomend switching to v3.4.0 a more stable and reliable release for users.***  
 > [!CAUTION]
-> As of v3.4.0 the windows compatibility just exists but is very unstable, buggy and not functional v3.5.0 will fix this issue.  
+> As of v3.4.0 the windows compatibility just exists but is very unstable, buggy and not functional. v3.5.0 which has still not been released, will fix this issue.  
 The app uses in build flatlaf 3.7 from v3.2.0 onwards no extra downloads are required!  
-versions below v3.2.0 do not support flatlaf and are highly unstable, please use the latest version!  
+versions below v3.2.0 do not support flatlaf which does not effect the application directly but provides a better feel and look.  
+Lower versions are highly unstable, please use the latest version!  
 
 # License
 This application comes under the GNU GPL 3.0 License 
