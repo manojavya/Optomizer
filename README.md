@@ -36,7 +36,7 @@ Download the `Optomizer.jar` from the releases section.
 
 Open the Terminal and navigate to the download folder.
 
-Then run <pre> ```java -jar <filename> ``` </pre> (type the download name in place of filename)
+Then run <pre> ```java -jar Optomizer_vX-X-X.jar``` </pre> (type the file version in place of `X-X-X` which is the latest version is `3.4.0`)
 
 The "Optomizer.jar" will be located in the release section or you may fork this repository and get the jar file, most of the jar files are in `src/bin-dd-mm-yy/` or in `src/`.
 
