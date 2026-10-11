@@ -40,9 +40,12 @@ Then run <pre> ```java -jar Optomizer_vX-X-X.jar``` </pre> (type the file versio
 
 The "Optomizer.jar" will be located in the release section or you may fork this repository and get the jar file, most of the jar files are in `src/bin-dd-mm-yy/` or in `src/`.
 
-# Do not use `sudo`!
+# Precautions
 > [!WARNING]
-> This application uses flatlaf UI form v3.2.0 onwards, any java Swing UI will break if `sudo` is used instead of that we use GUI popups like `pkexec` and `oascript`.
+> This application uses flatlaf UI form v3.2.0 onwards, any java Swing UI will break if `sudo` is used, we instead use GUI popups like `pkexec`, `oascript`, and `RunAs` for Linux, Mac OS, and Windows 11 respectively.
+
+>[!CAUTION]
+> This application is compatible with almost all Linux distributions, although only tested on Arch Linux and Ubuntu 24.04LTS, and Mac OS X or above and Windows 11 avoid running this application on older Operating Systems.
 
 # How to Use?
 After running `java -jar Optomizer.jar`, the app will launch, and then there will be a text field where you can enter the name (Please enter the name of the app if you are in v3.3.0 or above as lower version strictly require PID and will break if you give a name) of the app you want to set. Entering the wrong name could lead to negative performance.
