@@ -67,19 +67,26 @@ If you do not know the name of your app, then you can go to the System Monitor a
 
 
 # Dependencies and versions:
-**Depends on: Java (C) JDK 21**  
+**Depends on: Java (C) JDK 21**
+
+**Linux Dependency: Requires an active `polkit agent`**
 > [!CAUTION]
 > Requires Java to function, 100% of this app is made in java altough the commands are not java commands they are run using `process builder` for  advanced connectivity with the terminal.  
 > The correct version or above is required for this app to function as failing to comply with them can cause errors.  
 
 | Version      | Required Java Version |
 | :---         | :---                  |
+| **v3.5.0**   | Java 21 or above      |
 | **v3.4.0**   | Java 21 or above      |
 | **v3.3.0**   | Java 21 or above      |
 | **v3.2.0**   | Java 25 or above      |
 | **v2.0.0**   | Java 25 or above      |
 | **v2.0.0beta**| Java 24 or above     |
 | **v1.0.0**   | Java 24 or above      |
+
+# Whats New?
+## v3.5.0 Windows Patch
+Update 3.5.0 features patches for a few problems Windows users faced in the Optomizer app and also switched the logging system to `java.util.logging.Logger`
 
 # Developers
 Developed by me btw. I use Arch btw. Pls ignore spelling mistakes, + I spelt Optomizer wrong on purpose, Optomizer was spelled wrong to be unique, intitially it was just a spelling mistake but then I released how unique this name was so I kept it :) .

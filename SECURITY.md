@@ -8,8 +8,9 @@ All Pull requests will be throughly checked by the developer if compliant the pu
 | ------- | ------------------ |
 | 3.1.0   | No                 |
 | 3.2.0   | No                 |
-| 3.3.0   | Yes                |
+| 3.3.0   | No                 |
 | 3.4.0   | Yes                |
+| 3.5.0   | Yes                |
 
 
 ## Reporting a Vulnerability
