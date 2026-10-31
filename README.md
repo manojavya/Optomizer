@@ -29,7 +29,7 @@ This app requires no form payment at all! This is a free open source project, Li
        -osssssso.      :ssssssso.   
       :osssssss/        osssso+++.  
      /ossssssss/        +ssssooo/-  
-> [!INFO]
+> [!WARNING]
 > Fan made program made to run on Linux, MacOS X, and Windows(11).
 > NOT ASSOCIATED WITH ARCH LINUX, but recommended for Arch Linux.
 > Reccomended for XFCE, GNOME, and KDE Plasma, also tested on Hyprland and i3 wm.
@@ -101,8 +101,8 @@ Contact us at Discord: [Optomizer Discord](https://discord.gg/3HKF29KuMX)
 The link is: https://discord.gg/3HKF29KuMX
 
 # Stable Releases
-So far the most stable Optomizer release is the Optomizer v3.4.0 as it is much more advanced and also uses the LTS Java 21!  
-v3.5.0 coming soon! features a patch for [Issue #4](https://github.com/manojavya/Optomizer/issues/4) and [Issue #5](https://github.com/manojavya/Optomizer/issues/5)
+So far the most stable Optomizer release is the Optomizer v3.5.0 as it is much more advanced and also uses the LTS Java 21!  
+v3.5.0 features a patch for [Issue #4](https://github.com/manojavya/Optomizer/issues/4) and [Issue #5](https://github.com/manojavya/Optomizer/issues/5)
 
 # Refreshing
 v3.4.0 Supports refreshing the process list, there is a dedicated button for refreshing right above the Discord button. The refresh button does not auto refresh as it consumes resources which is not ideal for an app which is meant to boost performance.
@@ -113,7 +113,7 @@ Windows users are recommended to use v3.5.0(Not yet released, under development)
 **All versions below v2.0.0 only support linux.**  
 **Avoid using older versions we reccomend switching to v3.4.0 a more stable and reliable release for users.***  
 > [!CAUTION]
-> As of v3.4.0 the windows compatibility just exists but is very unstable, buggy and not functional. v3.5.0 which has still not been released, will fix this issue.  
+> As of v3.4.0 the windows compatibility just exists but is very unstable, buggy and not functional. v3.5.0 which has been released, will fix this issue.  
 The app uses in build flatlaf 3.7 from v3.2.0 onwards no extra downloads are required!  
 versions below v3.2.0 do not support flatlaf which does not effect the application directly but provides a better feel and look.  
 Lower versions are highly unstable, please use the latest version!  
