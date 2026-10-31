@@ -31,9 +31,13 @@ This app requires no form payment at all! This is a free open source project, Li
      /ossssssss/        +ssssooo/-  
 > [!WARNING]
 > Fan made program made to run on Linux, MacOS X, and Windows(11).
+>
 > NOT ASSOCIATED WITH ARCH LINUX, but recommended for Arch Linux.
+>
 > Reccomended for XFCE, GNOME, and KDE Plasma, also tested on Hyprland and i3 wm.
+>
 > No Guarentee that this will effect performance, might slightly increase performance, performance is subject to computer specifications!
+>
 > No application can do anything to boost performance, performance is subject to Operating system and hardware, this application can only orgnise your system to gain what ever performance it can.
 
 # How to Run
