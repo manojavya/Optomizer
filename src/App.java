@@ -31,9 +31,10 @@ import java.awt.event.*;
 import java.awt.*;
 import java.net.URL;
 import java.io.*;
-import java.util.Date;
+import java.util.logging.Logger;
 
 public class App {
+    private static final Logger l = Logger.getLogger(App.class.getName());
     ImageIcon logo;
     String statusautorefresh = "Off";
     public static void main(String[] args) {
@@ -42,9 +43,6 @@ public class App {
     }
     
     public App() {
-        Date d = new Date();
-        //XXX: Date tag
-        System.out.println("-----------" + d + "-----------");
         UIManager.put("Button.arc", 100);
         UIManager.put("Component.arc", 100);
         UIManager.put("ProgressBar.arc", 100);
@@ -55,8 +53,7 @@ public class App {
         if (logoUrl != null) {
             logo = new ImageIcon(logoUrl);
         } else {
-            System.err.println("Warning: Logo.png not found on classpath; using empty icon.");
-            System.out.println("-----------" + d + "-----------");
+            l.warning("ERROR: Logo.png not found on classpath; using empty icon.");
             logo = new ImageIcon();
         }
         mainFrame.setIconImage(logo.getImage());
@@ -77,27 +74,26 @@ public class App {
         );
         
         JPanel panel = new JPanel();
-        panel.setBounds(0, 0, 800, 600);
+        panel.setBounds(0, 0, 800, 650);
         panel.setLayout(null);
         //panel.setBackground(Color.WHITE); // Default background color, No longer used because Flatlaf controlls the color
         mainFrame.add(panel);
 
         String os = System.getProperty("os.name").toLowerCase();
-        System.out.println("DEBUG: OS Found on the system is: " + os);
-        System.out.println("DEBUG: Operating System Detected: " + os);
+        l.info("DEBUG: OS Found on the system is: " + os);
+        l.config("DEBUG: Operating System Detected: " + os);
         if (os.contains("linux")) {
             // XXX:LINUX
-            System.out.println("Target is linux OS detected os: " + os);
+            l.info("Target is linux OS detected os: " + os);
             System.out.println("");
-            System.out.println("Target reached... Succesfully Starting...");
+            l.info("Target reached... Succesfully Starting...");
             System.out.println("");
-            System.out.println("Any ongoing background processes will be displayed on the terminal");
+            l.info("Any ongoing background processes will be displayed on the terminal");
             System.out.println("");
-            System.out.println("If you see any errors please check the terminal for error messages");
+            l.info("If you see any errors please check the terminal for error messages");
             System.out.println("");
-            System.out.println("If you are unable to figure out the error then just send the error message or the error picture at our Discord server, Have a Nice Day!");
+            l.info("If you are unable to figure out the error then just send the error message or the error picture at our Discord server, Have a Nice Day!");
             System.out.println("");
-            System.out.println("-----------" + d + "-----------");
 
             JTextField pidField = new JTextField();
             pidField.setToolTipText("Select PID from dropdown or type PID manually");
@@ -149,7 +145,7 @@ public class App {
                 String apptorenice = pidField.getText();
                 //pidLabel.setText("PID set to: " + pidTtext); // Display the PID
                 //pidLabel.setForeground(Color.RED); // Change text color to red
-                System.out.println("DEBUG: Name set to: " + apptorenice); // Display the PID in the terminal
+                l.fine("Name set to: " + apptorenice); // Display the PID in the terminal
                 try {
                     //String command = "pkexec renice -n 0 " + pidTtext; //pkexec is a useful command that tells the DE to get a sudo prompt!! great isint it?
                     ProcessBuilder processBuilder = new ProcessBuilder("sh", "-c", "pkexec renice -n 0 -p $(pidof " + apptorenice + ")");
@@ -158,7 +154,7 @@ public class App {
 
                     String line;
                     while ((line = reader.readLine()) != null) {
-                        System.out.println(line);
+                        l.fine(line);
                     }
 
                     process.waitFor();
@@ -169,7 +165,7 @@ public class App {
                         "Error setting priority: " + ex.getMessage(),
                         "Error", 
                         JOptionPane.ERROR_MESSAGE);
-                        System.out.println(ex.getMessage()
+                        l.severe(ex.getMessage()
                     );
                 }
             });
@@ -248,7 +244,7 @@ public class App {
             JButton exitButton = new JButton("Exit");
             exitButton.setBounds(180, 100, 100, 30);
             exitButton.addActionListener(e -> {
-                System.out.println("-----------" + d + "-----------");
+                l.info("Application exit");
                 System.exit(0);
             });
             panel.add(exitButton);
@@ -288,8 +284,7 @@ public class App {
             DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>();
             //ImageIcon appicon = new ImageIcon("/usr/share/icons/hicolor/scalable/apps/btop.svg");
             ProcessBuilder pline = new ProcessBuilder("sh", "-c", "ps -eo comm | sort | uniq");
-            System.out.println("-----------" + d + "-----------");
-            System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
+            l.fine("Getting List of processes running... click refresh to refresh list");
             try {
                 Process lprocess = pline.start(); //lprocess is "List processes"
                 BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
@@ -303,7 +298,7 @@ public class App {
                     model.addElement(line.trim()); // Add each line to the combo box model
                     model.addElement(" ");
                 }
-                System.out.println(line);
+                l.fine(line);
             
                 lprocess.waitFor();
             } catch (IOException | InterruptedException ex) {
@@ -315,6 +310,7 @@ public class App {
                 );
             }
 
+            //TODO: Auto Refresh
             /*while(statusautorefresh == "On"){
             int j = 1;
             for(String s = "On"; s == statusautorefresh; j++){
@@ -357,7 +353,7 @@ public class App {
                     pidField.setText(processDetails[0]);
                     
                     //now use the PID to renice or whatever
-                    System.out.println("DEBUG: Name of the selected app is: " + processDetails[0] + " type that name in the text box(The textbox) if not aldready added automatically.");
+                    l.fine("Name of the selected app is: " + processDetails[0] + " type that name in the text box(The textbox) if not aldready added automatically.");
                 }
             });
             panel.add(comboBox);
@@ -371,8 +367,7 @@ public class App {
                     Process lprocess = pline.start(); //lprocess is "List processes"
                     BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
                     String line; // this line is just the list of processes idk y i called it a "line" lol.
-                    System.out.println("-----------" + d + "-----------");
-                    System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
+                    l.fine("Getting List of processes running... click refresh to refresh list");
                     // Skip the first line (header) if necessary
                     lreader.readLine();
             
@@ -380,7 +375,7 @@ public class App {
                         //System.out.println("Successfully Read Porcesses"); // Useful for debugging! You will thank me later, nvm it just spams that line bruh
                         model.addElement(line.trim()); // Add each line to the combo box model
                     }
-                    System.out.println("DEBUG: Successful refresh");
+                    l.fine("Successful refresh");
             
                     lprocess.waitFor();
                     } catch (IOException | InterruptedException ex) {
@@ -390,7 +385,6 @@ public class App {
                             "Error", 
                             JOptionPane.ERROR_MESSAGE
                         );
-                        System.out.println("-----------" + d + "-----------");
                     }
             });
             panel.add(rfshbtn);
@@ -399,17 +393,16 @@ public class App {
         
         else if (os.contains("windows 11")) {
             //Windows 11 CODE!
-            System.out.println("Target reached... Succesfully Starting...");
+            l.info("Target reached... Succesfully Starting...");
             System.out.println("");
-            System.out.println("Any ongoing background processes will be displayed on the terminal");
+            l.info("Any ongoing background processes will be displayed on the terminal");
             System.out.println("");
-            System.out.println("If you see any errors please check the terminal for error messages");
+            l.info("If you see any errors please check the terminal for error messages");
             System.out.println("");
-            System.out.println("If you are unable to figure out the error then just send the error message or the error picture at our Discord server, Have a Nice Day!");
+            l.info("If you are unable to figure out the error then just send the error message or the error picture at our Discord server, Have a Nice Day!");
             System.out.println("");
-            System.out.println("DEBUG: Operating System detected: " + os);
+            l.info("DEBUG: Operating System detected: " + os);
             System.out.println("");
-            System.out.println("-----------" + d + "-----------");
 
             JTextField pidField = new JTextField();
             pidField.setToolTipText("Select PID from dropdown or type PID manually");
@@ -441,8 +434,8 @@ public class App {
                     //XXX: TEST ME -> HIGH PRIORITY
                     String line;
                     while ((line = reader.readLine()) != null) {
-                        System.out.println(line);
-                        System.out.println("DEBUG: Attempt to set application " + pidText + " to high priority");
+                        l.fine(line);
+                        l.fine("Attempt to set application " + pidText + " to high priority");
                     }
 
                     process.waitFor();
@@ -463,7 +456,7 @@ public class App {
             killproc.setForeground(Color.WHITE);
             killproc.addActionListener(e -> {
                 String victimappname = pidField.getText();
-                System.out.println("DEBUG: Killing application " + victimappname);
+                l.fine("Killing application " + victimappname);
                 //String cmd = "Stop-Process -Name \"" + victimappname + "\" "; Depricated Method bruh windows changed this method after the windows 10 update so fr this is ridiculus :(
                 try{
                     ProcessBuilder killcmd = new ProcessBuilder(
@@ -493,7 +486,7 @@ public class App {
                 String pidTtext = pidField.getText();
                 //pidLabel.setText("PID set to: " + pidTtext); // Display the PID
                 //pidLabel.setForeground(Color.RED); // Change text color to red
-                System.out.println("DEBUG: PID set to: " + pidTtext); // Display the PID in the terminal
+                l.fine("PID set to: " + pidTtext); // Display the PID in the terminal
                 try {
                     //String command = "powershell -Command \"Start-Process cmd -ArgumentList '/c wmic process where ProcessId=" + pidTtext + " call setpriority 32' -Verb RunAs\"";                    
                     ProcessBuilder processBuilder = new ProcessBuilder(
@@ -505,18 +498,18 @@ public class App {
 
                     String line;
                     while ((line = reader.readLine()) != null) {
-                        System.out.println(line);
+                        l.fine(line);
                     }
 
                     process.waitFor();
-                    System.out.println("DEBUG: Priority set successfully.");
+                    l.fine("Priority set successfully.");
                 } catch (Exception ex) {
                     ex.printStackTrace();
                     JOptionPane.showMessageDialog(mainFrame, 
                         "Error setting priority: " + ex.getMessage(),
                         "Error", 
                         JOptionPane.ERROR_MESSAGE);
-                        System.out.println(ex.getMessage()
+                        l.severe(ex.getMessage()
                     );
                 }
             });
@@ -613,8 +606,7 @@ public class App {
                 "powershell.exe", "-NoProfile", "-Command", 
                 "\"Get-Process | Where-Object MainWindowHandle -ne 0 | Select-Object Name, Id\""
             );
-            System.out.println("-----------" + d + "-----------");
-            System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
+            l.fine("Getting List of processes running... click refresh to refresh list");
             try {
                 Process lprocess = pline.start(); //lprocess is "List processes"
                 BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
@@ -627,7 +619,7 @@ public class App {
                     //System.out.println("Successfully Read Porcesses"); // Useful for debugging! You will thank me later, nvm it just spams that line bruh
                     model.addElement(line.trim()); // Add each line to the combo box model
                 }
-                System.out.println(line);
+                l.fine(line);
             
                 lprocess.waitFor();
             } catch (IOException | InterruptedException ex) {
@@ -652,7 +644,7 @@ public class App {
                     pidField.setText(processDetails[0]);
                     
                     //now use the PID to renice or whatever
-                    System.out.println("DEBUG: PID of the selected app is: " + processDetails[0] + " type that number in the pid box(The textbox) if not aldready added automatically.");
+                    l.fine("PID of the selected app is: " + processDetails[0] + " type that number in the pid box(The textbox) if not aldready added automatically.");
                 }
             });
             panel.add(comboBox);
@@ -666,8 +658,7 @@ public class App {
                     Process lprocess = pline.start(); //lprocess is "List processes"
                     BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
                     String line; // this line is just the list of processes idk y i called it a "line" lol.
-                    System.out.println("-----------" + d + "-----------");
-                    System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
+                    l.fine("Getting List of processes running... click refresh to refresh list");
                     // Skip the first line (header) if necessary
                     lreader.readLine();
             
@@ -675,7 +666,7 @@ public class App {
                         //System.out.println("Successfully Read Porcesses"); // Useful for debugging! You will thank me later, nvm it just spams that line bruh
                         model.addElement(line.trim()); // Add each line to the combo box model
                     }
-                    System.out.println("DEBUG: Successful refresh");
+                    l.fine("Successful refresh");
             
                     lprocess.waitFor();
                     } catch (IOException | InterruptedException ex) {
@@ -692,13 +683,13 @@ public class App {
 
         else if (os.contains("mac")) {
 
-            System.out.println("Target reached... Succesfully Starting...");
+            l.info("Target reached... Succesfully Starting...");
             System.out.println("");
-            System.out.println("Any ongoing background processes will be displayed on the terminal");
+            l.info("Any ongoing background processes will be displayed on the terminal");
             System.out.println("");
-            System.out.println("If you see any errors please check the terminal for error messages");
+            l.info("If you see any errors please check the terminal for error messages");
             System.out.println("");
-            System.out.println("If you are unable to figure out the error then just send the error message or the error picture at our Discord server, Have a Nice Day!");
+            l.info("If you are unable to figure out the error then just send the error message or the error picture at our Discord server, Have a Nice Day!");
             System.out.println("");
 
             JTextField pidField = new JTextField();
@@ -743,19 +734,19 @@ public class App {
                 String appname = pidField.getText();
                 //pidLabel.setText("PID set to: " + pidTtext); // Display the PID
                 //pidLabel.setForeground(Color.RED); // Change text color to red
-                System.out.println("DEBUG: PID set to: " + appname); // Display the PID in the terminal
+                l.fine("PID set to: " + appname); // Display the PID in the terminal
                 try {
                     String command = "do shell script \"renice -n 0 -p $(pgrep " + appname + ")\" with administrator privileges";
                     ProcessBuilder process = new ProcessBuilder("osascript", "-e", command);
                     process.start();
-                    System.out.println("Priority set successfully.");
+                    l.fine("Priority set successfully.");
                 } catch (Exception ex) {
                     ex.printStackTrace();
                     JOptionPane.showMessageDialog(mainFrame, 
                         "Error setting priority: " + ex.getMessage(),
                         "Error", 
                         JOptionPane.ERROR_MESSAGE);
-                        System.out.println(ex.getMessage()
+                        l.severe(ex.getMessage()
                     );
                 }
             });
@@ -767,7 +758,7 @@ public class App {
             killproc.setForeground(Color.WHITE);
             killproc.addActionListener(e -> {
                 String victimappname = pidField.getText();
-                System.out.println("DEBUG: Killing process " + victimappname);
+                l.fine("Killing process " + victimappname);
                 //String cmd = "pkexec pkill " + victimappname;
                 String cmd = "do shell script \"pkill " + victimappname + "\" with administrator privileges";
                 try{
@@ -879,8 +870,7 @@ public class App {
                 Process lprocess = pline.start(); //lprocess is "List processes"
                 BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
                 String line; // this line is just the list of processes idk y i called it a "line" lol.
-                System.out.println("-----------" + d + "-----------");
-                System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
+                l.finest("Getting List of processes running... click refresh to refresh list");
                 // Skip the first line (header) if necessary
                 lreader.readLine();
             
@@ -888,7 +878,7 @@ public class App {
                     //System.out.println("Successfully Read Porcesses"); // Useful for debugging! You will thank me later, nvm it just spams that line bruh
                     model.addElement(line.trim()); // Add each line to the combo box model
                 }
-                System.out.println(line);
+                l.fine(line);
             
                 lprocess.waitFor();
             } catch (IOException | InterruptedException ex) {
@@ -913,7 +903,7 @@ public class App {
                     pidField.setText(processDetails[0]);
                     
                     //now use the PID to renice or whatever
-                    System.out.println("DEBUG: Name of the selected app is: " + processDetails[0] + " type that name in the pid box(The textbox) if not aldready added automatically.");
+                    l.fine("Name of the selected app is: " + processDetails[0] + " type that name in the pid box(The textbox) if not aldready added automatically.");
                 }
             });
             panel.add(comboBox);
@@ -927,8 +917,7 @@ public class App {
                     Process lprocess = pline.start(); //lprocess is "List processes"
                     BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
                     String line; // this line is just the list of processes idk y i called it a "line" lol.
-                    System.out.println("-----------" + d + "-----------");
-                    System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
+                    l.fine("Getting List of processes running... click refresh to refresh list");
                     // Skip the first line (header) if necessary
                     lreader.readLine();
             
@@ -957,6 +946,7 @@ public class App {
                 "Unsupported OS", 
                 JOptionPane.ERROR_MESSAGE
             );
+            l.severe("Couldnt Load Application for the OS:" + os);
         }
         JButton settingsButton = new JButton("Settings");
             settingsButton.setBounds(350, 100, 100, 30);
@@ -997,7 +987,7 @@ public class App {
                     panel.revalidate();
                     SwingUtilities.updateComponentTreeUI(settingsFrame);
                     settingsFrame.revalidate();
-                    System.out.println("DEBUG: Dark mode enabled");
+                    l.config("Dark mode enabled");
                     //darkmode = 1;
                 });
                 generalTab.add(darkMode);
@@ -1010,7 +1000,7 @@ public class App {
                     panel.revalidate();
                     SwingUtilities.updateComponentTreeUI(settingsFrame);
                     settingsFrame.revalidate();
-                    System.out.println("DEBUG: Light mode enabled");
+                    l.config("Light mode enabled");
                     //darkmode = 0;
                 });
                 generalTab.add(lightMode);
@@ -1733,18 +1723,18 @@ public class App {
                 arfstat.setBounds(10, 155, 190, 30);
                 generalTab.add(arfstat);
                 
-                JToggleButton autorfrsh = new JToggleButton("Auto Refresh");
-                autorfrsh.setBounds(10, 130, 150, 30);
+                JToggleButton autorfrsh = new JToggleButton("Auto Refresh,UNDER DEVELOPMENT");
+                autorfrsh.setBounds(10, 130, 290, 30);
                 autorfrsh.addActionListener(e1 -> {
                     if(autorfrsh.isSelected()){
                         statusautorefresh = "On"; //The autorefresh variable must be an instance variable
                         arfstat.setText("Auto Refresh status is: " + statusautorefresh);
-                        System.out.println("DEBUG: Auto Refresh status is: " + statusautorefresh);
+                        l.config("Auto Refresh status is: " + statusautorefresh);
                     }
                     else{
                         statusautorefresh = "Off";
                         arfstat.setText("Auto Refresh status is: " + statusautorefresh);
-                        System.out.println("DEBUG: Auto Refresh status is: " + statusautorefresh);
+                        l.config("Auto Refresh status is: " + statusautorefresh);
                     }
                 });
                 generalTab.add(autorfrsh);
@@ -1757,7 +1747,7 @@ public class App {
                 tabbedPane.repaint();
                 settingsFrame.add(tabbedPane);
                 settingsFrame.setVisible(true);
-                System.out.println("DEBUG: Sorry about the settings box being bigger than the main window, it was needed to make shure that the license is readable by the user.");
+                l.info("Sorry about the settings box being bigger than the main window, it was needed to make shure that the license is readable by the user.");
             });
             panel.add(settingsButton);
         
