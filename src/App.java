@@ -1,4 +1,4 @@
-// V.3.4.0 Public release.
+// V.3.5.0 Public release.
 //             -`  ©               
 //              .o+`                   
 //             `ooo/                   
@@ -18,7 +18,9 @@
 // NOT ASSOCIATED WITH ARCH LINUX, but recommended for Arch Linux.
 // Reccomended for XFCE, GNOME, and KDE Plasma.
 // No Guarentee that this will effect performance, might slightly increase performance, performance is subject to computer specifications!
-// No application can do anything to boost performance, performance is subject to Operating system and hardware.
+// No application can do anything to boost performance, performance is subject to Operating system and hardware, this application can only orgnise your system to gain what ever performance it can.
+// Broooo this was so hard to fix like im fr atp this update was hard to patch.
+// This is also Lowkey so messed up i mean the code is unorganised.
 // ---------------------------------------------------------------------------------------------------------------------------------------
 // Dependencies: Java(21 or above), Operating System(Linux, MacOS, Windows).
 
@@ -29,17 +31,20 @@ import java.awt.event.*;
 import java.awt.*;
 import java.net.URL;
 import java.io.*;
+import java.util.Date;
 
 public class App {
-
     ImageIcon logo;
-
+    String statusautorefresh = "Off";
     public static void main(String[] args) {
         FlatMacDarkLaf.setup();
         new App();
     }
     
-        public App() {
+    public App() {
+        Date d = new Date();
+        //XXX: Date tag
+        System.out.println("-----------" + d + "-----------");
         UIManager.put("Button.arc", 100);
         UIManager.put("Component.arc", 100);
         UIManager.put("ProgressBar.arc", 100);
@@ -51,6 +56,7 @@ public class App {
             logo = new ImageIcon(logoUrl);
         } else {
             System.err.println("Warning: Logo.png not found on classpath; using empty icon.");
+            System.out.println("-----------" + d + "-----------");
             logo = new ImageIcon();
         }
         mainFrame.setIconImage(logo.getImage());
@@ -77,9 +83,10 @@ public class App {
         mainFrame.add(panel);
 
         String os = System.getProperty("os.name").toLowerCase();
-        
+        System.out.println("DEBUG: OS Found on the system is: " + os);
+        System.out.println("DEBUG: Operating System Detected: " + os);
         if (os.contains("linux")) {
-
+            // XXX:LINUX
             System.out.println("Target is linux OS detected os: " + os);
             System.out.println("");
             System.out.println("Target reached... Succesfully Starting...");
@@ -90,6 +97,7 @@ public class App {
             System.out.println("");
             System.out.println("If you are unable to figure out the error then just send the error message or the error picture at our Discord server, Have a Nice Day!");
             System.out.println("");
+            System.out.println("-----------" + d + "-----------");
 
             JTextField pidField = new JTextField();
             pidField.setToolTipText("Select PID from dropdown or type PID manually");
@@ -141,7 +149,7 @@ public class App {
                 String apptorenice = pidField.getText();
                 //pidLabel.setText("PID set to: " + pidTtext); // Display the PID
                 //pidLabel.setForeground(Color.RED); // Change text color to red
-                System.out.println("Name set to: " + apptorenice); // Display the PID in the terminal
+                System.out.println("DEBUG: Name set to: " + apptorenice); // Display the PID in the terminal
                 try {
                     //String command = "pkexec renice -n 0 " + pidTtext; //pkexec is a useful command that tells the DE to get a sudo prompt!! great isint it?
                     ProcessBuilder processBuilder = new ProcessBuilder("sh", "-c", "pkexec renice -n 0 -p $(pidof " + apptorenice + ")");
@@ -154,7 +162,7 @@ public class App {
                     }
 
                     process.waitFor();
-                    System.out.println("Priority set successfully.");
+                    System.out.println("DEBUG: Priority set successfully.");
                 } catch (Exception ex) {
                     ex.printStackTrace();
                     JOptionPane.showMessageDialog(mainFrame, 
@@ -224,7 +232,7 @@ public class App {
                 );
 
                 try {
-                    Desktop.getDesktop().browse(new java.net.URI("https://github.com/AlphaWolf6940/Optomizer/wiki"));
+                    Desktop.getDesktop().browse(new java.net.URI("https://github.com/manojavya/Optomizer/wiki"));
                 } catch (Exception ex) {
                     ex.printStackTrace();
                     JOptionPane.showMessageDialog(mainFrame, 
@@ -240,6 +248,7 @@ public class App {
             JButton exitButton = new JButton("Exit");
             exitButton.setBounds(180, 100, 100, 30);
             exitButton.addActionListener(e -> {
+                System.out.println("-----------" + d + "-----------");
                 System.exit(0);
             });
             panel.add(exitButton);
@@ -277,9 +286,10 @@ public class App {
             panel.add(link);
 
             DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>();
-
+            //ImageIcon appicon = new ImageIcon("/usr/share/icons/hicolor/scalable/apps/btop.svg");
             ProcessBuilder pline = new ProcessBuilder("sh", "-c", "ps -eo comm | sort | uniq");
-
+            System.out.println("-----------" + d + "-----------");
+            System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
             try {
                 Process lprocess = pline.start(); //lprocess is "List processes"
                 BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
@@ -291,6 +301,7 @@ public class App {
                 while ((line = lreader.readLine()) != null) {
                     System.out.println(line); // Useful for debugging! You will thank me later, nvm it just spams that line bruh
                     model.addElement(line.trim()); // Add each line to the combo box model
+                    model.addElement(" ");
                 }
                 System.out.println(line);
             
@@ -303,6 +314,35 @@ public class App {
                     JOptionPane.ERROR_MESSAGE
                 );
             }
+
+            /*while(statusautorefresh == "On"){
+            int j = 1;
+            for(String s = "On"; s == statusautorefresh; j++){
+               try {
+                Process lprocess = pline.start(); //lprocess is "List processes"
+                BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
+                String line; // this line is just the list of processes idk y i called it a "line" lol.
+                System.out.println("-----------" + d + "-----------");
+                System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
+                // Skip the first line (header) if necessary
+                lreader.readLine();
+            
+                while ((line = lreader.readLine()) != null) {
+                    System.out.println(line); // Useful for debugging! You will thank me later, nvm it just spams that line bruh
+                    model.addElement(line.trim()); // Add each line to the combo box model
+                }
+                System.out.println(line);
+            
+                lprocess.waitFor();
+                } catch (IOException | InterruptedException ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(mainFrame, 
+                    "Error fetching process list: " + ex.getMessage(),
+                    "Error", 
+                    JOptionPane.ERROR_MESSAGE
+                );
+            } 
+            }*/
 
             JComboBox<String> comboBox = new JComboBox<>(model);
             comboBox.setBounds(10, 70, 600, 30);
@@ -317,7 +357,7 @@ public class App {
                     pidField.setText(processDetails[0]);
                     
                     //now use the PID to renice or whatever
-                    System.out.println("Name of the selected app is: " + processDetails[0] + " type that name in the text box(The textbox) if not aldready added automatically.");
+                    System.out.println("DEBUG: Name of the selected app is: " + processDetails[0] + " type that name in the text box(The textbox) if not aldready added automatically.");
                 }
             });
             panel.add(comboBox);
@@ -331,7 +371,8 @@ public class App {
                     Process lprocess = pline.start(); //lprocess is "List processes"
                     BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
                     String line; // this line is just the list of processes idk y i called it a "line" lol.
-            
+                    System.out.println("-----------" + d + "-----------");
+                    System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
                     // Skip the first line (header) if necessary
                     lreader.readLine();
             
@@ -339,7 +380,7 @@ public class App {
                         //System.out.println("Successfully Read Porcesses"); // Useful for debugging! You will thank me later, nvm it just spams that line bruh
                         model.addElement(line.trim()); // Add each line to the combo box model
                     }
-                    System.out.println("Successful refresh");
+                    System.out.println("DEBUG: Successful refresh");
             
                     lprocess.waitFor();
                     } catch (IOException | InterruptedException ex) {
@@ -349,14 +390,15 @@ public class App {
                             "Error", 
                             JOptionPane.ERROR_MESSAGE
                         );
+                        System.out.println("-----------" + d + "-----------");
                     }
             });
             panel.add(rfshbtn);
 
         }
         
-        else if (os.contains("windows")) {
-
+        else if (os.contains("windows 11")) {
+            //Windows 11 CODE!
             System.out.println("Target reached... Succesfully Starting...");
             System.out.println("");
             System.out.println("Any ongoing background processes will be displayed on the terminal");
@@ -365,6 +407,9 @@ public class App {
             System.out.println("");
             System.out.println("If you are unable to figure out the error then just send the error message or the error picture at our Discord server, Have a Nice Day!");
             System.out.println("");
+            System.out.println("DEBUG: Operating System detected: " + os);
+            System.out.println("");
+            System.out.println("-----------" + d + "-----------");
 
             JTextField pidField = new JTextField();
             pidField.setToolTipText("Select PID from dropdown or type PID manually");
@@ -385,14 +430,19 @@ public class App {
                 pidLabel.setText("PID: " + pidText); // Display the PID
                 pidLabel.setForeground(Color.RED); // Change text color to red
                 try {
-                    String command = "powershell -Command \"Start-Process cmd -ArgumentList '/c wmic process where ProcessId=" + pidText + " call setpriority 32' -Verb RunAs\"";
-                    ProcessBuilder processBuilder = new ProcessBuilder(command.split(" "));
+                    // NOTE: DO NOT USE SET PRIORITY AS 256 IT WILL CAUSE LAG!!
+                    // 256 sets to real time so then you will experience input lag use 125
+                    ProcessBuilder processBuilder = new ProcessBuilder(
+                        "powershell.exe", "-NoProfile", "-Command",
+                        "\"Start-Process powershell -ArgumentList \'-NoProfile -Command \"(Get-Process -Id " + pidText + ").PriorityClass = \"High\"\"\' -Verb RunAs\""
+                    );
                     Process process = processBuilder.start();
                     BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-
+                    //XXX: TEST ME -> HIGH PRIORITY
                     String line;
                     while ((line = reader.readLine()) != null) {
                         System.out.println(line);
+                        System.out.println("DEBUG: Attempt to set application " + pidText + " to high priority");
                     }
 
                     process.waitFor();
@@ -414,9 +464,12 @@ public class App {
             killproc.addActionListener(e -> {
                 String victimappname = pidField.getText();
                 System.out.println("DEBUG: Killing application " + victimappname);
-                String cmd = "Stop-Process -Name \"" + victimappname + "\" ";
+                //String cmd = "Stop-Process -Name \"" + victimappname + "\" "; Depricated Method bruh windows changed this method after the windows 10 update so fr this is ridiculus :(
                 try{
-                    ProcessBuilder killcmd = new ProcessBuilder(cmd.split(" "));
+                    ProcessBuilder killcmd = new ProcessBuilder(
+                        "powershell.exe", "-NoProfile", "-Command", 
+                        "\"Stop-Process -Name \'" + victimappname + "\'\""
+                    );
                     killcmd.start();
 
                 }
@@ -440,9 +493,13 @@ public class App {
                 String pidTtext = pidField.getText();
                 //pidLabel.setText("PID set to: " + pidTtext); // Display the PID
                 //pidLabel.setForeground(Color.RED); // Change text color to red
-                System.out.println("PID set to: " + pidTtext); // Display the PID in the terminal
+                System.out.println("DEBUG: PID set to: " + pidTtext); // Display the PID in the terminal
                 try {
-                    String command = "powershell -Command \"Start-Process cmd -ArgumentList '/c wmic process where ProcessId=" + pidTtext + " call setpriority 32' -Verb RunAs\"";                    ProcessBuilder processBuilder = new ProcessBuilder(command.split(" "));
+                    //String command = "powershell -Command \"Start-Process cmd -ArgumentList '/c wmic process where ProcessId=" + pidTtext + " call setpriority 32' -Verb RunAs\"";                    
+                    ProcessBuilder processBuilder = new ProcessBuilder(
+                        "powershell.exe", "-NoProfile", "-Command",
+                        "\"Start-Process powershell -ArgumentList \'-NoProfile -Command \"(Get-Process -Id " + pidTtext + ").PriorityClass = \"Normal\"\"\' -Verb RunAs\""
+                    );
                     Process process = processBuilder.start();
                     BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 
@@ -452,7 +509,7 @@ public class App {
                     }
 
                     process.waitFor();
-                    System.out.println("Priority set successfully.");
+                    System.out.println("DEBUG: Priority set successfully.");
                 } catch (Exception ex) {
                     ex.printStackTrace();
                     JOptionPane.showMessageDialog(mainFrame, 
@@ -492,13 +549,13 @@ public class App {
                     "You can also visit the github Optomizer wiki for help on how to run \n\n" + 
                     "Bug reporting can be done on our Discord Server and also on our github page under the 'issues section'\n\n" + 
                     "You can get further support on our Discord server \n\n" +
-                    "You will now be redirected to the Github Optomizer wiki for more inforamtion ",
+                    "You will now be redirected to the Github Optomizer wiki for more information ",
                     "Help", 
                     JOptionPane.INFORMATION_MESSAGE
                 );
 
                 try {
-                    Desktop.getDesktop().browse(new java.net.URI("https://github.com/AlphaWolf6940/Optomizer/wiki"));
+                    Desktop.getDesktop().browse(new java.net.URI("https://github.com/manojavya/Optomizer/wiki"));
                 } catch (Exception ex) {
                     ex.printStackTrace();
                     JOptionPane.showMessageDialog(mainFrame, 
@@ -551,9 +608,13 @@ public class App {
             panel.add(link);
 
             DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>();
-
-            ProcessBuilder pline = new ProcessBuilder("ps", "-eo", "pid,ni,comm", "--sort=-ni");
-
+            //ProcessBuilder pline = new ProcessBuilder("powershell.exe", "-NoProfile", "-Command", "Get-Process | Where-Object { $_.Id -and $_.Name } | ForEach-Object { \"$($_.Id)   $($_.Name)\" }");
+            ProcessBuilder pline = new ProcessBuilder(
+                "powershell.exe", "-NoProfile", "-Command", 
+                "\"Get-Process | Where-Object MainWindowHandle -ne 0 | Select-Object Name, Id\""
+            );
+            System.out.println("-----------" + d + "-----------");
+            System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
             try {
                 Process lprocess = pline.start(); //lprocess is "List processes"
                 BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
@@ -591,7 +652,7 @@ public class App {
                     pidField.setText(processDetails[0]);
                     
                     //now use the PID to renice or whatever
-                    System.out.println("PID of the selected app is: " + processDetails[0] + " type that number in the pid box(The textbox) if not aldready added automatically.");
+                    System.out.println("DEBUG: PID of the selected app is: " + processDetails[0] + " type that number in the pid box(The textbox) if not aldready added automatically.");
                 }
             });
             panel.add(comboBox);
@@ -605,7 +666,8 @@ public class App {
                     Process lprocess = pline.start(); //lprocess is "List processes"
                     BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
                     String line; // this line is just the list of processes idk y i called it a "line" lol.
-            
+                    System.out.println("-----------" + d + "-----------");
+                    System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
                     // Skip the first line (header) if necessary
                     lreader.readLine();
             
@@ -613,7 +675,7 @@ public class App {
                         //System.out.println("Successfully Read Porcesses"); // Useful for debugging! You will thank me later, nvm it just spams that line bruh
                         model.addElement(line.trim()); // Add each line to the combo box model
                     }
-                    System.out.println("Successful refresh");
+                    System.out.println("DEBUG: Successful refresh");
             
                     lprocess.waitFor();
                     } catch (IOException | InterruptedException ex) {
@@ -681,7 +743,7 @@ public class App {
                 String appname = pidField.getText();
                 //pidLabel.setText("PID set to: " + pidTtext); // Display the PID
                 //pidLabel.setForeground(Color.RED); // Change text color to red
-                System.out.println("PID set to: " + appname); // Display the PID in the terminal
+                System.out.println("DEBUG: PID set to: " + appname); // Display the PID in the terminal
                 try {
                     String command = "do shell script \"renice -n 0 -p $(pgrep " + appname + ")\" with administrator privileges";
                     ProcessBuilder process = new ProcessBuilder("osascript", "-e", command);
@@ -757,7 +819,7 @@ public class App {
                 );
 
                 try {
-                    Desktop.getDesktop().browse(new java.net.URI("https://github.com/AlphaWolf6940/Optomizer/wiki"));
+                    Desktop.getDesktop().browse(new java.net.URI("https://github.com/manojavya/Optomizer/wiki"));
                 } catch (Exception ex) {
                     ex.printStackTrace();
                     JOptionPane.showMessageDialog(mainFrame, 
@@ -817,7 +879,8 @@ public class App {
                 Process lprocess = pline.start(); //lprocess is "List processes"
                 BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
                 String line; // this line is just the list of processes idk y i called it a "line" lol.
-            
+                System.out.println("-----------" + d + "-----------");
+                System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
                 // Skip the first line (header) if necessary
                 lreader.readLine();
             
@@ -850,7 +913,7 @@ public class App {
                     pidField.setText(processDetails[0]);
                     
                     //now use the PID to renice or whatever
-                    System.out.println("Name of the selected app is: " + processDetails[0] + " type that name in the pid box(The textbox) if not aldready added automatically.");
+                    System.out.println("DEBUG: Name of the selected app is: " + processDetails[0] + " type that name in the pid box(The textbox) if not aldready added automatically.");
                 }
             });
             panel.add(comboBox);
@@ -864,7 +927,8 @@ public class App {
                     Process lprocess = pline.start(); //lprocess is "List processes"
                     BufferedReader lreader = new BufferedReader(new InputStreamReader(lprocess.getInputStream())); // this command just reads the list above
                     String line; // this line is just the list of processes idk y i called it a "line" lol.
-            
+                    System.out.println("-----------" + d + "-----------");
+                    System.out.println("DEBUG: Getting List of processes running on " + d + "... click refresh to refresh list");
                     // Skip the first line (header) if necessary
                     lreader.readLine();
             
@@ -872,7 +936,7 @@ public class App {
                         //System.out.println("Successfully Read Porcesses"); // Useful for debugging! You will thank me later, nvm it just spams that line bruh
                         model.addElement(line.trim()); // Add each line to the combo box model
                     }
-                    System.out.println("Successful refresh");
+                    System.out.println("DEBUG: Successful refresh");
             
                     lprocess.waitFor();
                     } catch (IOException | InterruptedException ex) {
@@ -933,7 +997,7 @@ public class App {
                     panel.revalidate();
                     SwingUtilities.updateComponentTreeUI(settingsFrame);
                     settingsFrame.revalidate();
-                    System.out.println("Dark mode enabled");
+                    System.out.println("DEBUG: Dark mode enabled");
                     //darkmode = 1;
                 });
                 generalTab.add(darkMode);
@@ -946,7 +1010,7 @@ public class App {
                     panel.revalidate();
                     SwingUtilities.updateComponentTreeUI(settingsFrame);
                     settingsFrame.revalidate();
-                    System.out.println("Light mode enabled");
+                    System.out.println("DEBUG: Light mode enabled");
                     //darkmode = 0;
                 });
                 generalTab.add(lightMode);
@@ -956,7 +1020,7 @@ public class App {
                 modeGroup.add(lightMode);
 
                 JButton exitSettingsMenu = new JButton("Exit Settings Menu");
-                exitSettingsMenu.setBounds(10, 130, 150, 30);
+                exitSettingsMenu.setBounds(10, 180, 150, 30);
                 exitSettingsMenu.addActionListener(e1 -> settingsFrame.dispose());
                 generalTab.add(exitSettingsMenu);
 
@@ -1649,7 +1713,7 @@ public class App {
                                                                                         "\n");
                 licensetext.setEditable(false);
                 licensetext.setFocusable(false);
-                licensetext.setOpaque(false); // Blends with the background
+                licensetext.setOpaque(false); // Blends with the background, not really effective but fine
                 licensetext.setLineWrap(true); // Wraps long lines
                 licensetext.setWrapStyleWord(true); // Prevents cutting words in half
                 licensetext.setForeground(Color.RED);
@@ -1664,6 +1728,27 @@ public class App {
                 //scrollPane.setPreferredSize(new Dimension(800, 600)); 
                 scrollPane.setBounds(10, 10, 760, 480);
                 licensepane.add(scrollPane);
+
+                JLabel arfstat = new JLabel();
+                arfstat.setBounds(10, 155, 190, 30);
+                generalTab.add(arfstat);
+                
+                JToggleButton autorfrsh = new JToggleButton("Auto Refresh");
+                autorfrsh.setBounds(10, 130, 150, 30);
+                autorfrsh.addActionListener(e1 -> {
+                    if(autorfrsh.isSelected()){
+                        statusautorefresh = "On"; //The autorefresh variable must be an instance variable
+                        arfstat.setText("Auto Refresh status is: " + statusautorefresh);
+                        System.out.println("DEBUG: Auto Refresh status is: " + statusautorefresh);
+                    }
+                    else{
+                        statusautorefresh = "Off";
+                        arfstat.setText("Auto Refresh status is: " + statusautorefresh);
+                        System.out.println("DEBUG: Auto Refresh status is: " + statusautorefresh);
+                    }
+                });
+                generalTab.add(autorfrsh);
+
                 //licensepane.add(licensetext);
                 tabbedPane.addTab("License", licensepane);
                 tabbedPane.addTab("General", generalTab);
@@ -1672,7 +1757,7 @@ public class App {
                 tabbedPane.repaint();
                 settingsFrame.add(tabbedPane);
                 settingsFrame.setVisible(true);
-                System.out.println("Sorry about the settings box being bigger than the main window, it was needed to make shure that the license is readable by the user.");
+                System.out.println("DEBUG: Sorry about the settings box being bigger than the main window, it was needed to make shure that the license is readable by the user.");
             });
             panel.add(settingsButton);
         

@@ -1,0 +1,44 @@
+PS C:\Users\Children\Downloads\jdk-21.0.10_windows-x64_bin\jdk-21.0.10\bin> .\java.exe -cp "D:\Code\Optomizer\Optomizer_V3.5.0\src\flatlaf-3.7.jar;." D:\Code\Optomizer\Optomizer_V3.5.0\src\App.java
+-----------Tue Oct 13 11:53:34 IST 2026-----------
+# No need to worry about this error it was caused because I did not specify the logo path.
+Warning: Logo.png not found on classpath; using empty icon.
+-----------Tue Oct 13 11:53:34 IST 2026-----------
+DEBUG: OS Found on the system is: windows 11
+DEBUG: Operating System Detected: windows 11
+Target reached... Succesfully Starting...
+
+Any ongoing background processes will be displayed on the terminal
+
+If you see any errors please check the terminal for error messages
+
+If you are unable to figure out the error then just send the error message or the error picture at our Discord server, Have a Nice Day!
+
+DEBUG: Operating System detected: windows 11
+
+-----------Tue Oct 13 11:53:34 IST 2026-----------
+-----------Tue Oct 13 11:53:34 IST 2026-----------
+DEBUG: Getting List of processes running on Tue Oct 13 11:53:34 IST 2026... click refresh to refresh list
+null
+-----------Tue Oct 13 11:53:34 IST 2026-----------
+DEBUG: Getting List of processes running on Tue Oct 13 11:53:34 IST 2026... click refresh to refresh list
+DEBUG: Successful refresh
+DEBUG: Sorry about the settings box being bigger than the main window, it was needed to make shure that the license is readable by the user.
+DEBUG: Light mode enabled
+DEBUG: Dark mode enabled
+DEBUG: Killing application
+DEBUG: PID set to:
+DEBUG: Priority set successfully.
+DEBUG: Sorry about the settings box being bigger than the main window, it was needed to make shure that the license is readable by the user.
+-----------Tue Oct 13 11:53:34 IST 2026-----------
+DEBUG: Getting List of processes running on Tue Oct 13 11:53:34 IST 2026... click refresh to refresh list
+DEBUG: Successful refresh
+__________________________________________________________________________________________
+This Command Worked:
+ Get-Process | Where-Object { $_.MainWindowTitle } | ForEach-Object { "$($_.Id) - $($_.Name)" }
+It returned:
+17276 - ApplicationFrameHost
+25304 - chrome
+10856 - Code
+1960 - SystemSettings
+27336 - TextInputHost
+26592 - WindowsTerminal

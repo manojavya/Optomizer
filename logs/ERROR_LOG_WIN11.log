@@ -1,0 +1,64 @@
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.formdev.flatlaf.util.NativeLibrary in an unnamed module (file:/C:/Users/Izyaan%20Ahmed/Downloads/Optomizerv3.5.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Target reached... Succesfully Starting...
+
+Any ongoing background processes will be displayed on the terminal
+
+If you see any errors please check the terminal for error messages
+
+If you are unable to figure out the error then just send the error message or the error picture at our Discord server, Have a Nice Day!
+
+java.io.IOException: Cannot run program "ps": CreateProcess error=2, The system cannot find the file specified
+        at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1112)
+        at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1046)
+        at App.<init>(App.java:558)
+        at App.main(App.java:39)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+        at java.base/java.lang.ProcessImpl.create(Native Method)
+        at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:485)
+        at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:146)
+        at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1078)
+        ... 3 more
+Sorry about the settings box being bigger than the main window, it was needed to make shure that the license is readable by the user.
+Light mode enabled
+Dark mode enabled
+DEBUG: Killing application
+java.io.IOException: Cannot run program "Stop-Process": CreateProcess error=2, The system cannot find the file specified
+        at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1112)
+        at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1046)
+        at App.lambda$new$9(App.java:420)
+        at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+        at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+        at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+        at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+        at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+        at java.desktop/java.awt.Component.processMouseEvent(Component.java:6576)
+        at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3404)
+        at java.desktop/java.awt.Component.processEvent(Component.java:6341)
+        at java.desktop/java.awt.Container.processEvent(Container.java:2260)
+        at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4958)
+        at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2318)
+        at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
+        at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4917)
+        at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4560)
+        at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4501)
+        at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2304)
+        at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2671)
+        at java.desktop/java.awt.Component.dispatchEvent(Component.java:4790)
+        at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:725)
+        at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:702)
+        at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+        at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+        at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+        at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+        at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+        at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+        at java.base/java.lang.ProcessImpl.create(Native Method)
+        at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:485)
+        at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:146)
+        at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1078)
+        ... 28 more

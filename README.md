@@ -29,7 +29,12 @@ This app requires no form payment at all! This is a free open source project, Li
        -osssssso.      :ssssssso.   
       :osssssss/        osssso+++.  
      /ossssssss/        +ssssooo/-  
- 
+> [!INFO]
+> Fan made program made to run on Linux, MacOS X, and Windows(11).
+> NOT ASSOCIATED WITH ARCH LINUX, but recommended for Arch Linux.
+> Reccomended for XFCE, GNOME, and KDE Plasma, also tested on Hyprland and i3 wm.
+> No Guarentee that this will effect performance, might slightly increase performance, performance is subject to computer specifications!
+> No application can do anything to boost performance, performance is subject to Operating system and hardware, this application can only orgnise your system to gain what ever performance it can.
 
 # How to Run
 Download the `Optomizer.jar` from the releases section.
@@ -45,7 +50,7 @@ The "Optomizer.jar" will be located in the release section or you may fork this 
 > This application uses flatlaf UI form v3.2.0 onwards, any java Swing UI will break if `sudo` is used, we instead use GUI popups like `pkexec`, `oascript`, and `RunAs` for Linux, Mac OS, and Windows 11 respectively.
 
 >[!CAUTION]
-> This application is compatible with almost all Linux distributions, although only tested on Arch Linux and Ubuntu 24.04LTS, and Mac OS X or above and Windows 11 avoid running this application on older Operating Systems.
+> This application is compatible with almost all Linux distributions, although only tested on Arch Linux and Ubuntu 24.04LTS, and Mac OS 12.7 and Windows 11 avoid running this application on older Operating Systems.
 
 # How to Use?
 After running `java -jar Optomizer.jar`, the app will launch, and then there will be a text field where you can enter the name (Please enter the name of the app if you are in v3.3.0 or above as lower version strictly require PID and will break if you give a name) of the app you want to set. Entering the wrong name could lead to negative performance.
@@ -62,7 +67,7 @@ If you do not know the name of your app, then you can go to the System Monitor a
 
 
 # Dependencies and versions:
-**Depends on: Java (C) Oracle 2026**  
+**Depends on: Java (C) JDK 21**  
 > [!CAUTION]
 > Requires Java to function, 100% of this app is made in java altough the commands are not java commands they are run using `process builder` for  advanced connectivity with the terminal.  
 > The correct version or above is required for this app to function as failing to comply with them can cause errors.  
@@ -81,7 +86,7 @@ Developed by me btw. I use Arch btw. Pls ignore spelling mistakes, + I spelt Opt
 
 Developed by: Manojavya (old user name was AlphaWolf6940 also known as Arch_Wizard on the Arch User Repository and Manu on the Arch Wiki). 
 
-JoeDuck2020 only gave the Idea of this project they have no role in the maintainance of this project or creation of this project, this project is created and maintained by Manojavya P.M.
+JoeDuck2020 gave the Idea for this project, this project is created and maintained by Manojavya P.M.
 
 # Contact
 We have a Discord server, you may join by clicking the link:
