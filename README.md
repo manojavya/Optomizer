@@ -112,14 +112,14 @@ v3.5.0 features a patch for [Issue #4](https://github.com/manojavya/Optomizer/is
 v3.4.0 Supports refreshing the process list, there is a dedicated button for refreshing right above the Discord button. The refresh button does not auto refresh as it consumes resources which is not ideal for an app which is meant to boost performance.
 
 # Compatibility
-We have added support for Windows OS from v2.0.0 onwards, and now we have all OS's in support. Linux, Mac OS, Windows.  
+We have added support for Windows OS from v2.0.0 onwards, and now we have most OS's in support. Linux, Mac OS, Windows.  
 Windows users are recommended to use v3.5.0(Not yet released, under development) for stability. 
 **All versions below v2.0.0 only support linux.**  
 **Avoid using older versions we reccomend switching to v3.4.0 a more stable and reliable release for users.***  
 > [!CAUTION]
-> As of v3.4.0 the windows compatibility just exists but is very unstable, buggy and not functional. v3.5.0 which has been released, will fix this issue.  
-The app uses in build flatlaf 3.7 from v3.2.0 onwards no extra downloads are required!  
-versions below v3.2.0 do not support flatlaf which does not effect the application directly but provides a better feel and look.  
+> As of v3.4.0 the windows compatibility just exists but is very unstable, buggy and not functional. v3.5.0 which has been released, fixes this issue.  
+The app uses in build flatlaf 3.7 from v3.2.0 onwards and no extra downloads are required!  
+versions below v3.2.0 do not support flatlaf which does not effect the application directly, but having flatlaf provides a better feel and look.  
 Lower versions are highly unstable, please use the latest version!  
 
 # License
