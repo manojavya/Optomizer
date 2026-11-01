@@ -61,8 +61,8 @@ After running `java -jar Optomizer.jar`, the app will launch, and then there wil
 
 If you do not know the name of your app, then you can go to the System Monitor and check the app name there, or if you use a version above v3.0.0 Optomizer has a dropdown box from where you can choose any of the task you wish to choose out of all the tasks.
 
-# Preview* (V3.4.0):
-
+# Preview* (V3.5.0):
+v3.4.0 and v3.5.0 have no visual difference...
 ## Dark Mode
 <img width="802" height="165" alt="image" src="https://github.com/user-attachments/assets/b0219e75-1309-4452-be2d-5721d940c152" />
 
