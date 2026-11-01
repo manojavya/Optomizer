@@ -38,7 +38,7 @@ This app requires no form payment at all! This is a free open source project, Li
 >
 > No Guarentee that this will effect performance, might slightly increase performance, performance is subject to computer specifications!
 >
-> No application can do anything to boost performance, performance is subject to Operating system and hardware, this application can only orgnise your system to gain what ever performance it can.
+> No application can do anything to boost performance, performance is subject to Operating system and hardware, this application can only organise your system to gain what ever performance it can.
 
 # How to Run
 Download the `Optomizer.jar` from the releases section.
