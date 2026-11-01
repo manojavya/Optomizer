@@ -1,6 +1,6 @@
 {
     "java.project.referencedLibraries": [
-        "/home/manojavya/Desktop/Code/Optomizer/Optomizer_V3.5.0/lib/flatlaf-3.7.jar"
+        "lib/flatlaf-3.7.jar"
     ],
     "java.project.sourcePaths": [
         "src"
